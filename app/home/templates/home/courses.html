@@ -1,0 +1,68 @@
+{% extends "home/base.html" %}
+{% block title %} Portfolio Page {% endblock title%}
+{% load static %}
+{% load humanize %}
+{% load i18n %}
+
+{% block content %}
+
+<div class="main-wrapper">
+	<section class="cta-section theme-bg-light py-5">
+		<div class="container text-center single-col-max-width">
+			<h2 class="heading">{% trans "Course Certificates"%}</h2>
+			<div class="intro">
+			<p>{% trans "Welcome to my online portfolio. Here is a list of Courses / Certificates that I have taken in my career in Programmming and Data Analysis. I'm taking on freelance work at the moment. Want some help building your software?"%}</p>
+			
+			</div>
+			<a class="btn btn-primary" href="{% url 'contact' %}" target="_blank"><i class="fas fa-paper-plane me-2"></i>{% trans "Hire Me"%}</a>
+			
+			
+		</div><!--//container-->
+	</section>
+	<section class="projects-list px-3 py-5 p-md-5">
+		<div class="container">
+			<div class="text-center">
+				<ul id="filters" class="filters mb-5 mx-auto   ps-0">
+					<li class="type active mb-3 mb-lg-0" data-filter="*">{% trans "All"%}</li>
+					<li class="type  mb-3 mb-lg-0" data-filter=".databases">{% trans "Databases"%}</li>
+					<li class="type  mb-3 mb-lg-0" data-filter=".programming">{% trans "Programming"%}</li>
+					<li class="type  mb-3 mb-lg-0" data-filter=".security">{% trans "Security"%}</li>
+					<li class="type  mb-3 mb-lg-0" data-filter=".devops">{% trans "DevOps"%}</li>
+					<li class="type  mb-3 mb-lg-0" data-filter=".excel">{% trans "Excel"%}</li>
+					<li class="type  mb-3 mb-lg-0" data-filter=".backend">{% trans "Backend"%}</li>
+				</ul><!--//filters-->
+			</div>
+			
+			<div class="project-cards row isotope">
+				{% for course in courses %}
+				<div class="isotope-item col-md-6 mb-5 {{ course.categories }}">
+					<div class="card project-card">
+						<div class="row">
+							<div class="col-12 col-xl-5 card-img-holder">
+								<img src="{{ course.cover.url }}" class="card-img" alt="image">
+							</div>
+							<div class="col-12 col-xl-7">
+								<div class="card-body">
+									<h5 class="card-title" style="font-size:14px"><a href="{{ course.link }}" target="_blank" class="theme-link">{{ course.title }}</a></h5>
+									<p class="card-text">{{ course.description|truncatechars:200 }}</p>
+									<p class="card-text"><small class="text-muted" style="font-size:10px">{% trans "Obtained:"%} {{ course.obtained_date|naturalday }} | {% trans "Platform:"%} {{ course.platform }}</small></p>
+									
+								</div>
+							</div>
+						</div>
+						
+					</div><!--//card-->
+				</div><!--//col-->
+				{% endfor %}
+			</div><!--//row-->
+		
+		</div>
+	</section>
+	
+	<footer class="footer text-center py-4">
+		<small class="copyright">Template Copyright &copy; <a href="https://themes.3rdwavemedia.com/" target="_blank">3rd Wave Media</a></small>
+	</footer>
+
+</div><!--//main-wrapper-->
+
+{% endblock content %}

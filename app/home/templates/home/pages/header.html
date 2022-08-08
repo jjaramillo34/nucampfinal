@@ -1,0 +1,106 @@
+{% load static %}
+{% load humanize %}
+{% load i18n %}
+<header class="header text-center">	    
+    <div class="force-overflow">
+        <h1 class="blog-name pt-lg-4 mb-0"><a class="no-text-decoration" href="index.html">Javier Jaramillo</a></h1>
+        
+        <nav class="navbar navbar-expand-lg navbar-dark" >
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div id="navigation" class="collapse navbar-collapse flex-column" >
+                <div class="profile-section pt-3 pt-lg-0">
+                    <img class="profile-image mb-3 rounded-circle mx-auto" src="{% static 'assets/images/photo.jpg'%}" alt="image" >			
+                    
+                    <div class="bio mb-3">{% trans "Hi, my name is Javier Jaramillo and I'm a full stack developer / Data Analyst. Welcome to my personal website!" %}</div><!--//bio-->
+                    <ul class="social-list list-inline py-2 mx-auto">
+                        <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fab fa-github-alt fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fab fa-stack-overflow fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fab fa-codepen fa-fw"></i></a></li>
+                    </ul><!--//social-list-->
+                    <hr> 
+                </div><!--//profile-section-->
+                
+                <ul class="navbar-nav flex-column text-start">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'home:home' %}"><i class="fas fa-user fa-fw me-2"></i>{% trans "About Me"%}<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'projects:portfolio' %}"><i class="fas fa-laptop-code fa-fw me-2"></i>{% trans "Portfolio"%}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'courses:courses' %}"><i class="fas fa-briefcase fa-fw me-2"></i>{% trans "Courses &amp; Certificates"%}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'resume:resume' %}"><i class="fas fa-file-alt fa-fw me-2"></i>{% trans "Resume"%}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'blog:blog' %}"><i class="fas fa-blog fa-fw me-2"></i>{% trans "Blog"%}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact' %}"><i class="fas fa-envelope-open-text fa-fw me-2"></i>{% trans "Contact"%}</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-cogs fa-fw me-2"></i>{% trans "More Pages"%}
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="project.html">{% trans "Project Page"%}</a></li>
+                            <li><a class="dropdown-item" href="blog-home.html">{% trans "Blog Home 1"%}</a></li>
+                            <li><a class="dropdown-item" href="blog-home-alt.html">{% trans "Blog Home 2"%}</a></li>
+                            <li><a class="dropdown-item" href="blog-post.html">{% trans "Blog Post"%}</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-language fa-fw me-2"></i>{% trans "Language"%}
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            {% get_current_language as LANGUAGE_CODE %}
+                            {% get_available_languages as LANGUAGES %}
+                            {% get_language_info_list for LANGUAGES as languages %}
+                            {% for language in languages %}
+                            <li>
+                                <a class="dropdown-item" href="/{{ language.code }}" style="text-transform: capitalize;">
+                                    {% if language.code == 'en' %}
+                                    <span class="flag-icon flag-icon-us"></span>
+                                        {{ language.name_local }}
+                                    {% endif %}
+                                    {% if language.code == 'es' %}
+                                    <span class="flag-icon flag-icon-es"></span>
+                                        {{ language.name_local }}
+                                    {% endif %}
+                                    {% if language.code == 'fr' %}
+                                    <span class="flag-icon flag-icon-fr"></span>
+                                        {{ language.name_local }}
+                                    {% endif %}
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                </ul>
+                
+                <div class="my-2">
+                    <a class="btn btn-primary" href="contact.html" target="_blank"><i class="fas fa-paper-plane me-2"></i>{% trans 'Hire Me'%}</a>
+                </div>
+                
+
+                <div class="dark-mode-toggle text-center w-100">
+                    <hr class="mb-4">
+                    <h4 class="toggle-name mb-3 "><i class="fas fa-adjust me-1"></i>{% trans 'Dark Mode'%}</h4>
+                    
+                    <input class="toggle" id="darkmode" type="checkbox">
+                    <label class="toggle-btn mx-auto mb-0" for="darkmode"></label>
+                    
+                </div><!--//dark-mode-toggle-->
+                
+            </div>
+        </nav>
+    </div><!--//force-overflow-->
+</header>
