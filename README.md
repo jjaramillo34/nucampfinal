@@ -6,7 +6,7 @@
   <!-- <a href="https://nucamp_final.netlify.app">Demo</a> -->
 </div>
 
-<h1 align="center">Nucamp_final</h1>
+<h1 align="center">Javier Jaramillo Porfolio</h1>
 
 <p align="center">
   <img alt="Github top language" src="https://img.shields.io/github/languages/top/jjaramillo34/nucampfinal?color=56BEB8">
@@ -46,7 +46,7 @@
 
 ## :dart: About ##
 
-Describe your project
+This is the repo containing the portfolio project for Nucamp Bootcamp 
 
 ## :sparkles: Features ##
 
