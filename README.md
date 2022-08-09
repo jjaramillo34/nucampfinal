@@ -57,7 +57,7 @@ In this portfolio I will be showcasing my work, resume, projects, certicates and
 :heavy_check_mark: Feature 4: Featured Projects\
 :heavy_check_mark: Feature 5: References\
 :heavy_check_mark: Feature 6: Resume Page\
-:heavy_check_mark: Feature 7: Course Certificates\
+:heavy_check_mark: Feature 7: Courses & Certificates\
 :heavy_check_mark: Feature 8: Blog - Blog Home\
 :heavy_check_mark: Feature 9: Blog Detail\
 :heavy_check_mark: Feature 10: Contact Page with google recaptcha & sendgrid API implementation\
