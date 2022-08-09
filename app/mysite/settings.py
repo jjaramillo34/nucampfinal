@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
+    'django.contrib.sitemaps',
     #apps
     'home',
     'testimonials',
@@ -201,13 +202,8 @@ RECAPTCHA_SCORE_THRESHOLD = 0.5
 # RECAPTCHA_FRONTEND_PROXY_HOST = 'https://recaptcha.net'
 
 #development v2
-RECAPTCHA_PUBLIC_KEY = "6LcpdiIhAAAAAJUQ1G-HzHEiBaFpJ3f6d-_c9Cl_"
-RECAPTCHA_PRIVATE_KEY = "6LcpdiIhAAAAAFdi_E_Cm9L5v8THvS-OtsPphDuo"
-
-#development v3
-#RECAPTCHA_PUBLIC_KEY = "6LescSIhAAAAAD87qiWpDgniOKLJ7BM5cEmPRuvt"
-#RECAPTCHA_PUBLIC_KEY = "6LescSIhAAAAAPnlhRu9OMPZ4zYvxbPBLTf2xHMZ"
-#RECAPTCHA_PRIVATE_KEY = "6LescSIhAAAAAPnlhRu9OMPZ4zYvxbPBLTf2xHMZ"
+RECAPTCHA_PUBLIC_KEY = config('RECAPTCHA_PUBLIC_KEY')
+RECAPTCHA_PRIVATE_KEY = config('RECAPTCHA_PRIVATE_KEY')
 
 #production
 #RECAPTCHA_PUBLIC_KEY = '6LeMayIhAAAAAPUAifgmE2AoUNWanm110cvdTJhc'
