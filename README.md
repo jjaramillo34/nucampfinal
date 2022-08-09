@@ -67,7 +67,7 @@ In this portfolio I will be showcasing my work, resume, projects, certicates and
 :heavy_check_mark: Feature 14: Cloudinary Cloud Image Repository\
 :heavy_check_mark: Feature 14: Django Admin Page - Parler Tranlastions\
 :heavy_check_mark: Feature 15: Django Admin Page - WYSIWYG CKEditor django plugin\
-:heavy_check_mark: Feature 16: Django Admin Page - WYSIWYG CKEditor django plugin\
+:heavy_check_mark: Feature 16: Django Admin Page - Rosetta Stone Locale Translations\
 
 ## :rocket: Technologies ##
 
@@ -123,7 +123,7 @@ $ python manage.py runserver
 
 ## :memo: License ##
 
-This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
+This project is under license from GNU(GPL). For more details, see the [LICENSE](LICENSE.md) file.
 
 
 Made with :heart: by <a href="https://github.com/jjaramillo34" target="_blank">Javier Jaramillo</a>
