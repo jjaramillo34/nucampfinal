@@ -64,6 +64,7 @@ In this portfolio I will be showcasing my work, resume, projects, certicates and
 :heavy_check_mark: Feature 11: Translations - Languages English - French - Spanish with Rosetta Stone & Django Parler\
 :heavy_check_mark: Feature 12: Subscribe Form with sendgrid API implementation\
 :heavy_check_mark: Feature 13: Sitemaps.xml\
+:heavy_check_mark: Feature 14: Cloudinary Cloud Image Repository\
 :heavy_check_mark: Feature 14: Django Admin Page - Parler Tranlastions\
 :heavy_check_mark: Feature 15: Django Admin Page - WYSIWYG CKEditor django plugin\
 :heavy_check_mark: Feature 16: Django Admin Page - WYSIWYG CKEditor django plugin\
@@ -72,34 +73,50 @@ In this portfolio I will be showcasing my work, resume, projects, certicates and
 
 The following tools were used in this project:
 
-- [Python](https://www.python.org/)
-- [Django](https://www.djangoproject.com/)
-- [Postgres](https://www.postgresql.org/)
-- [AWS](https://aws.amazon.com/)
+- [DJANGO] (https://www.djangoproject.com/)
+- [PYTHON] (https://www.python.org/)
+- [CSS] (https://www.w3schools.com/cssref/)
+- [HTML] (https://developer.mozilla.org/es/docs/Web/HTML)
+- [BOOTSTRAP] (https://getbootstrap.com/)
+- [WYSIWYG] (https://ckeditor.com/)
+- [POSTGRESSQL] (https://postgresql.org/)
+- [JAVASCRIPT] (https://www.javascript.com/)
 
-<img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue" />
-<img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white"/>
-<img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" />
-<img src="https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=orange" />
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue"/>
+  <img src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white"/> 
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white"/>
+  <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+</p>
 
 ## :white_check_mark: Requirements ##
 
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
+Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [PYTHON]() and DJANGO installed.
 
 ## :checkered_flag: Starting ##
+# Run Locally
 
 ```bash
 # Clone this project
 $ git clone https://github.com/jjaramillo34/nucamp_final
 
 # Access
-$ cd nucamp_final
+$ cd nucamp_final/app
 
 # Install dependencies
-$ yarn
+$ pip install requirements.txt
 
 # Run the project
-$ yarn start
+$ python manage.py makemigrations
+$ python manage.py migrate
+$ python manage.py createsuperuser
+
+# Run the project
+$ python manage.py runserver
 
 # The server will initialize in the <http://localhost:8000>
 ```
