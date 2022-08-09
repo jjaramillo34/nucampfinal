@@ -64,10 +64,18 @@ In this portfolio I will be showcasing my work, resume, projects, certicates and
 :heavy_check_mark: Feature 11: Translations - Languages English - French - Spanish with Rosetta Stone & Django Parler\
 :heavy_check_mark: Feature 12: Subscribe Form with sendgrid API implementation\
 :heavy_check_mark: Feature 13: Sitemaps.xml\
-:heavy_check_mark: Feature 14: Cloudinary Cloud Image Repository\
-:heavy_check_mark: Feature 14: Django Admin Page - Parler Tranlastions\
-:heavy_check_mark: Feature 15: Django Admin Page - WYSIWYG CKEditor django plugin\
-:heavy_check_mark: Feature 16: Django Admin Page - Rosetta Stone Locale Translations\
+:heavy_check_mark: Feature 14: Disqus Commenting Area | Javascript Plugin\
+:heavy_check_mark: Feature 15: Cloudinary Cloud Image Repository\
+:heavy_check_mark: Feature 16: Django Admin Page - Parler Tranlastions\
+:heavy_check_mark: Feature 17: Django Admin Page - WYSIWYG CKEditor django plugin\
+:heavy_check_mark: Feature 18: Django Admin Page - Rosetta Stone Locale Translations\
+:heavy_check_mark: Feature 19: Django Admin Page - Testimonials\
+:heavy_check_mark: Feature 20: Django Admin Page - Services\
+:heavy_check_mark: Feature 21: Django Admin Page - Resume\
+:heavy_check_mark: Feature 22: Django Admin Page - Blog\
+:heavy_check_mark: Feature 22: Django Admin Page - Course\
+:heavy_check_mark: Feature 22: Django Admin Page - Projects\
+:heavy_check_mark: Feature 22: Django Admin Page - Contact\
 
 ## :rocket: Technologies ##
 
