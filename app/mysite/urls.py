@@ -20,10 +20,12 @@ from django.conf.urls import handler403
 from django.conf.urls.i18n import i18n_patterns
 from django.utils.translation import gettext_lazy as _
 from django.contrib.sitemaps import views
+from .sitemaps import StaticViewSitemap
 from blog.sitemaps import PostSitemap
 from courses.sitemaps import CoursesSitemap
 
 sitemaps = {
+    'static': StaticViewSitemap,
     'blog': PostSitemap,
     'courses': CoursesSitemap,
 }

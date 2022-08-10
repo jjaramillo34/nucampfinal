@@ -3,7 +3,7 @@
 {% load i18n %}
 <header class="header text-center">	    
     <div class="force-overflow">
-        <h1 class="blog-name pt-lg-4 mb-0"><a class="no-text-decoration" href="index.html">Javier Jaramillo</a></h1>
+        <h1 class="blog-name pt-lg-4 mb-0"><a class="no-text-decoration" href="{% url 'home:home' %}">Javier Jaramillo</a></h1>
         
         <nav class="navbar navbar-expand-lg navbar-dark" >
             
@@ -17,8 +17,8 @@
                     
                     <div class="bio mb-3">{% trans "Hi, my name is Javier Jaramillo and I'm a full stack developer / Data Analyst. Welcome to my personal website!" %}</div><!--//bio-->
                     <ul class="social-list list-inline py-2 mx-auto">
-                        <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
-                        <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="https://twitter.com/jejaramilloc"><i class="fab fa-twitter fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.linkedin.com/in/javierjaramillo1/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
                         <li class="list-inline-item"><a href="#"><i class="fab fa-github-alt fa-fw"></i></a></li>
                         <li class="list-inline-item"><a href="#"><i class="fab fa-stack-overflow fa-fw"></i></a></li>
                         <li class="list-inline-item"><a href="#"><i class="fab fa-codepen fa-fw"></i></a></li>
@@ -43,7 +43,7 @@
                         <a class="nav-link" href="{% url 'blog:blog' %}"><i class="fas fa-blog fa-fw me-2"></i>{% trans "Blog"%}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'contact' %}"><i class="fas fa-envelope-open-text fa-fw me-2"></i>{% trans "Contact"%}</a>
+                        <a class="nav-link" href="{% url 'contact:contact' %}"><i class="fas fa-envelope-open-text fa-fw me-2"></i>{% trans "Contact"%}</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -87,7 +87,7 @@
                 </ul>
                 
                 <div class="my-2">
-                    <a class="btn btn-primary" href="contact.html" target="_blank"><i class="fas fa-paper-plane me-2"></i>{% trans 'Hire Me'%}</a>
+                    <a class="btn btn-primary" href="{% url 'contact:contact' %}" target="_blank"><i class="fas fa-paper-plane me-2"></i>{% trans 'Hire Me'%}</a>
                 </div>
                 
 

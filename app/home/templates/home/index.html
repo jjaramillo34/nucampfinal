@@ -21,11 +21,11 @@
 							{% endblocktrans %}
 							<a class="text-link" href="{% url 'blog:blog' %}">{% trans 'my blog'%}</a>
 							{% trans '. Want to know how I may help your project? Check out my project '%}
-							<a class="text-link" href="{% url 'projects:portfolio' %}">{% trans 'portfolio'%}</a> {% trans 'and'%} <a class="text-link" href="r{% url 'resume:resume' %}">{% trans 'online resume'%}</a>.
+							<a class="text-link" href="{% url 'projects:portfolio' %}">{% trans 'portfolio'%}</a> {% trans 'and'%} <a class="text-link" href="{% url 'resume:resume' %}">{% trans 'online resume'%}</a>.
 						</div><!--//bio-->
 						<div class="mb-4">
-							<a class="btn btn-primary me-2 mb-3" href="portfolio.html"><i class="fas fa-arrow-alt-circle-right me-2"></i><span class="d-none d-md-inline">{% trans 'View'%}</span> {% trans 'Portfolio'%}</a>
-							<a class="btn btn-secondary mb-3" href="resume.html"><i class="fas fa-file-alt me-2"></i><span class="d-none d-md-inline">{% trans 'View'%}</span> {% trans 'Resume'%}</a>
+							<a class="btn btn-primary me-2 mb-3" href="{% url 'projects:portfolio' %}"><i class="fas fa-arrow-alt-circle-right me-2"></i><span class="d-none d-md-inline">{% trans 'View'%}</span> {% trans 'Portfolio'%}</a>
+							<a class="btn btn-secondary mb-3" href="{% url 'resume:resume' %}"><i class="fas fa-file-alt me-2"></i><span class="d-none d-md-inline">{% trans 'View'%}</span> {% trans 'Resume'%}</a>
 						</div>
 					</div><!--//col-->
 					
@@ -128,7 +128,7 @@
 					</div><!--//col-->
 					{% endfor %}
 				</div><!--//row-->
-				<div class="text-center py-3"><a href="portfolio.html" class="btn btn-primary"><i class="fas fa-arrow-alt-circle-right me-2"></i>{% trans "View Portfolio"%}</a></div>
+				<div class="text-center py-3"><a href="{% url 'projects:portfolio' %}" class="btn btn-primary"><i class="fas fa-arrow-alt-circle-right me-2"></i>{% trans "View Portfolio"%}</a></div>
 				
 			</div><!--//container-->
 		</section><!--//featured-section-->
@@ -172,7 +172,7 @@
 							<div class="card-body">
 								<h5 class="card-title"><a class="theme-link" href="{% url 'blog:post_detail' post.slug  %}">{{ post.title }}</a></h5>
 								<p class="card-text">{{ post.content|truncatechars:400 }}</p>
-								<p class="mb-0"><a class="text-link" href="blog-post.html">{% trans "Read more"%} &rarr;</a></p>
+								<p class="mb-0"><a class="text-link" href="{% url 'blog:post_detail' post.slug  %}">{% trans "Read more"%} &rarr;</a></p>
 							</div>
 							<div class="card-footer">
 								<small class="text-muted">{{ post.created_on|naturalday }}</small>
@@ -181,7 +181,7 @@
 					</div><!--//col-->
 					{% endfor %}
 				</div><!--//row-->
-				<div class="text-center py-3"><a href="blog-home.html" class="btn btn-primary"><i class="fas fa-arrow-alt-circle-right me-2"></i>{% trans "View Blog"%}</a></div>
+				<div class="text-center py-3"><a href="{% url 'blog:blog' %}" class="btn btn-primary"><i class="fas fa-arrow-alt-circle-right me-2"></i>{% trans "View Blog"%}</a></div>
 			</div><!--//container-->
 			
 		</section><!--//latest-blog-section-->
