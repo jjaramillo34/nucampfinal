@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 from parler.models import TranslatableModel, TranslatedFields
 from django.utils.translation import gettext_lazy as _
 # Create your models here.
@@ -24,7 +25,11 @@ class Course(TranslatableModel):
     )
     
     class Meta:
-        ordering = ['-created_on']
+        ordering = ['created_on']
 
     def __str__(self):
         return f"{self.title} | {self.platform}"
+
+    def get_absolute_url(self):
+        return reverse("courses:course_detail", kwargs={"pk": self.pk})
+    

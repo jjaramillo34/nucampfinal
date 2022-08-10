@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 from django.contrib.auth.models import User
 from ckeditor_uploader.fields import RichTextUploadingField
 from tinymce import models as tinymce_models
@@ -32,6 +33,10 @@ class Post(TranslatableModel):
         
     def __str__(self):
         return f"Title: {self.title}"
+    
+    def get_absolute_url(self):
+        return reverse("blog:post_detail", args=[str(self.slug)])
+    
     
 class SubscribedUsers(models.Model):
     email = models.CharField(unique=True, max_length=150)

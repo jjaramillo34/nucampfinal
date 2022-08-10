@@ -46,7 +46,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
+    'django.contrib.sites',
     'django.contrib.sitemaps',
+    
     #apps
     'home',
     'testimonials',
@@ -57,6 +59,7 @@ INSTALLED_APPS = [
     'blog',
     'resume',
     'services',
+    
     #third party apps
     'ckeditor',
     'ckeditor_uploader',
@@ -73,6 +76,8 @@ INSTALLED_APPS = [
     'tinymce',
     #'snowpenguin.django.recaptcha3',
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
