@@ -9,10 +9,10 @@
 		<section class="about-me-section p-3 p-lg-5 theme-bg-light">
 			<div class="container">
 				<div class="profile-teaser row">
-					
+					{% for setting in homepage %}
 					<div class="col">
-						<h2 class="name font-weight-bold mb-1">Javier Jaramillo</h2>
-						<div class="tagline mb-3">{% trans 'Full Stack Developer / Data Analyst'%}</div>
+						<h2 class="name font-weight-bold mb-1">{{ setting.name }}</h2>
+						<div class="tagline mb-3">{{ setting.title }}</div>
 						<div class="bio mb-4" style="text-align: justify; text-justify: inter-word;">
 							{% blocktrans %}
 							My name is Javier Jaramillo. I am a Data Analyst & future full stack developer from Ecuador. I work 
@@ -28,7 +28,7 @@
 							<a class="btn btn-secondary mb-3" href="{% url 'resume:resume' %}"><i class="fas fa-file-alt me-2"></i><span class="d-none d-md-inline">{% trans 'View'%}</span> {% trans 'Resume'%}</a>
 						</div>
 					</div><!--//col-->
-					
+					{% endfor %}
 					<div class="col-md-5 col-lg-5">
 					    <img class="profile-image img-fluid mb-3 mb-lg-0 me-md-0" src="{% static 'assets/images/profile-lg.jpg' %}" alt="">
 					</div>

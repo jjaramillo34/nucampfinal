@@ -36,13 +36,3 @@ class Resume(TranslatableModel):
     def __str__(self):
         return f"Title: {self.job_title}"
     
-class Aside(TranslatableModel):
-    title = models.CharField(max_length=50, null=True)
-    #description = models.TextField(null=True)
-    updated_on = models.DateTimeField(auto_now= True)
-    created_on = models.DateTimeField(auto_now_add=True)
-    status = models.IntegerField(choices=STATUS, default=0)
-    
-    translations = TranslatedFields(
-        description = models.TextField(null=True)
-    )

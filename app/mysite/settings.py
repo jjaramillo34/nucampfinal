@@ -74,6 +74,7 @@ INSTALLED_APPS = [
     'django_json_widget',
     'captcha',
     'tinymce',
+    #"debug_toolbar",
     #'snowpenguin.django.recaptcha3',
 ]
 
@@ -89,7 +90,14 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    #"debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
+
+#INTERNAL_IPS = [
+#    # ...
+#    "127.0.0.1",
+#    # ...
+#]
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
 
@@ -177,6 +185,7 @@ LANGUAGES = (
     ('en', _('English')),
     ('fr', _('French')),
     ('es', _('Spanish')),
+    ('pt-br', _('Brazilian Portuguese')),
 )
 
 LOCALE_PATHS = [
@@ -184,10 +193,11 @@ LOCALE_PATHS = [
 ]
 
 PARLER_LANGUAGES = {
-    None: (
+    1: (
         {'code': 'en',}, # English
         {'code': 'fr',}, # French
         {'code': 'es',}, # Spanish
+        {'code': 'pt-br',}, # Brazilian Portuguese
     ),
     'default': {
         'fallbacks': ['en'],
