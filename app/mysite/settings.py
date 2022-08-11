@@ -74,6 +74,8 @@ INSTALLED_APPS = [
     'django_json_widget',
     'captcha',
     'tinymce',
+    #'highlightjs',
+    
     #"debug_toolbar",
     #'snowpenguin.django.recaptcha3',
 ]
@@ -92,6 +94,20 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     #"debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
+
+HIGHLIGHTJS = {
+    # The URL to the jQuery JavaScript file
+    'jquery_url': '//code.jquery.com/jquery.min.js',
+    # The highlight.js base URL
+    'base_url': '//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/highlight.min.js',
+    # The complete URL to the highlight.js CSS file
+    'css_url': '//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/styles/{0}.min.css',
+    # Include jQuery with highlight.js JavaScript (affects django-highlightjs template tags)
+    'include_jquery': False,
+    # The default used style.
+    'style': 'monokai_sublime',
+    }
+
 
 #INTERNAL_IPS = [
 #    # ...
@@ -220,10 +236,6 @@ RECAPTCHA_SCORE_THRESHOLD = 0.5
 RECAPTCHA_PUBLIC_KEY = config('RECAPTCHA_PUBLIC_KEY')
 RECAPTCHA_PRIVATE_KEY = config('RECAPTCHA_PRIVATE_KEY')
 
-#production
-#RECAPTCHA_PUBLIC_KEY = '6LeMayIhAAAAAPUAifgmE2AoUNWanm110cvdTJhc'
-#RECAPTCHA_PRIVATE_KEY = '6LeMayIhAAAAABt5vtm26b2UL6b3fS57HL9TCk3c'
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
@@ -279,9 +291,8 @@ CKEDITOR_CONFIGS = {
         'extraPlugins': ','.join(
             [
                'html5audio',
-               
-               
                'codesnippet',
+               'N1ED-editor',
             ]
         ),  
     },

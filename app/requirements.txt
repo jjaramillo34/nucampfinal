@@ -26,4 +26,5 @@ django-tinymce
 django-next-prev
 #django-picklefield
 django-json-widget
+django-highlightjs
 
