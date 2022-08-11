@@ -7,6 +7,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import get_object_or_404, render, redirect
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from blog.models import Post
+from home.models import Home
 from comment.forms import CommentForm
 from django.views.generic import DetailView
 from django.http import JsonResponse
@@ -19,6 +20,7 @@ from next_prev import next_in_order, prev_in_order
 # Create your views here.
 
 def PostList(request):
+    homepage = Home.objects.filter(status=1).order_by('id')
     object_list = Post.objects.filter(status=1).order_by('-created_on')
     #object_list = get_object_or_404(Post, slug=slug)
     #comments = post.comments.filter(active=True)
@@ -34,7 +36,12 @@ def PostList(request):
     except EmptyPage:
         # If page is out of range deliver last page of results
         post_list = paginator.page(paginator.num_pages)
+        
+    print(post_list.has_next())
+    print(post_list.has_previous())
+    
     context_dict = {
+        'homepage': homepage,
         'page': page, 
         'post_list': post_list, 
         }
@@ -75,6 +82,7 @@ def newsletter(request):
 def post_detail(request, slug):
     template_name = 'home/blog-post.html'
     form_class = CommentForm
+    homepage = Home.objects.filter(status=1).order_by('id')
     post = get_object_or_404(Post, slug=slug)
     #post = Post.objects.filter(slug=slug)
     #first_featured = post.first()
@@ -100,6 +108,7 @@ def post_detail(request, slug):
     
     
     context_dict = {'post': post,
+                    'homepage': homepage,
                     #'first': first_featured,
                     #'second': second_featured,
                     #'comments': comments,
@@ -178,3 +187,4 @@ def upload_image(request):
             'location': file_url
         })
     return JsonResponse({'detail': "Wrong request"})
+
