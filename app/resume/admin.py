@@ -8,11 +8,11 @@ from django.utils.translation import gettext_lazy as _
 
 # Register your models here.
 
-#@admin.register(Resume)
-#class ResumeAdmin(TranslatableAdmin):
-#    formfield_overrides = {
-#        JSONField: {'widget': JSONEditorWidget},
-#    }
+@admin.register(Resume)
+class ResumeAdmin(TranslatableAdmin):
+    formfield_overrides = {
+        JSONField: {'widget': JSONEditorWidget},
+    }
 
-admin.site.register(Resume, TranslatableAdmin)
+#admin.site.register(Resume, TranslatableAdmin)
 
