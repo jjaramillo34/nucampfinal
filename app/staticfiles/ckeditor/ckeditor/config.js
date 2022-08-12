@@ -8,7 +8,8 @@ CKEDITOR.editorConfig = function(config) {
     // config.language = 'fr';
     // config.uiColor = '#AADC6E';
     config.extraPlugins = "N1ED-editor";
-    config.apiKey = "2YPODFLT";
+    config.apiKey = '{{ env("API_KEY_CK") }}';
+    console.log(config.apiKey)
     config.skin = "n1theme";
     config.removePlugins = "iframe";
 };
