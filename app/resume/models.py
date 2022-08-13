@@ -1,12 +1,8 @@
 from gettext import translation
 from django.db import models
-from django.contrib.postgres.fields import ArrayField
-#from django.contrib.postgres.fields import JSONField
-from picklefield.fields import PickledObjectField
 from django.db.models import JSONField
 from ckeditor_uploader.fields import RichTextUploadingField
 from parler.models import TranslatableModel, TranslatedFields
-from tinymce import models as tinymce_models
 from django.utils.translation import gettext_lazy as _
 # Create your models here.
 

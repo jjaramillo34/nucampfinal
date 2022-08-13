@@ -13,12 +13,12 @@ services:
       - ./app/.env
     
     environment:
-      - DB_NAME=${DB_NAME}
-      - DB_USER=${DB_USER}
-      - DB_PASSWORD=${DB_PASSWORD}
-      - DB_HOST=${DB_HOST}
-      - DB_PORT=${DB_PORT}
-      - DATABASE=${DATABASE}
+      - DB_NAME=nucamp_final_db
+      - DB_USER=postgres
+      - DB_PASSWORD=admin123
+      - DB_HOST=pg
+      - DB_PORT=5432
+      - DATABASE=postgres
       
     depends_on:
       - pg
@@ -40,11 +40,11 @@ services:
       image: dpage/pgadmin4:6.11
       restart: always
       environment:
-          PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
-          PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
-          PGADMIN_LISTEN_PORT: ${PGADMIN_LISTEN_PORT}
-          PGADMIN_CONFIG_SERVER_MODE: ${PGADMIN_CONFIG_SERVER_MODE}
-          PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED: ${PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED}
+          PGADMIN_DEFAULT_EMAIL: admin@example.com
+          PGADMIN_DEFAULT_PASSWORD: admin123
+          PGADMIN_LISTEN_PORT: 5433
+          PGADMIN_CONFIG_SERVER_MODE: "False"
+          PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED: "False"
       ports:
           - "5433:5433"
       depends_on:
