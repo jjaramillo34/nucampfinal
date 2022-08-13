@@ -1,0 +1,396 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-08-13 14:08-0400\n"
+"PO-Revision-Date: 2022-08-13 14:47-0400\n"
+"Last-Translator:   <admin@datanaly.st>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.9.8\n"
+
+#: blog/admin.py:22 blog/models.py:24 courses/admin.py:17 resume/models.py:20
+#: services/models.py:21
+msgid "Title"
+msgstr "Título"
+
+#: blog/models.py:11 courses/models.py:8 home/models.py:10
+#: projects/models.py:9 resume/models.py:10 services/models.py:10
+msgid "Draft"
+msgstr "Rascunho"
+
+#: blog/models.py:12 courses/models.py:9 home/models.py:11
+#: projects/models.py:10 resume/models.py:11 services/models.py:11
+msgid "Publish"
+msgstr "Publique"
+
+#: blog/models.py:28 services/models.py:22
+msgid "Content"
+msgstr "Conteúdo"
+
+#: comment/admin.py:17
+msgid "Body"
+msgstr "Corpo"
+
+#: contact/forms.py:11 contact/models.py:8
+msgid "Select a service package you're interested in..."
+msgstr "Seleccione um pacote de serviços que lhe interessa..."
+
+#: contact/forms.py:26
+msgid "Name"
+msgstr "Nome"
+
+#: contact/forms.py:27
+msgid "Email"
+msgstr "Email"
+
+#: contact/forms.py:28
+msgid "Enter your message"
+msgstr "Digite sua mensagem"
+
+#: contact/models.py:9
+msgid "Basic"
+msgstr "Básico"
+
+#: contact/models.py:10
+msgid "Standard"
+msgstr "Padrão"
+
+#: contact/models.py:11
+msgid "Premium"
+msgstr "Premium"
+
+#: contact/models.py:12
+msgid "Not sure"
+msgstr "Não tenho a certeza"
+
+#: contact/views.py:64 contact/views.py:104
+msgid "You Message Has Been Send Successfully"
+msgstr "A sua mensagem tem sido enviada com sucesso"
+
+#: contact/views.py:72
+msgid "Oops... something went wrong with the form"
+msgstr "Oops... algo correu mal com o formulário."
+
+#: home/templates/home/blog-home-alt.html:10
+msgid "A Blog About Software Development And Life"
+msgstr "Um Blog sobre Desenvolvimento de Software e Vida"
+
+#: home/templates/home/blog-home-alt.html:11
+msgid ""
+"Welcome to my blog. Subscribe and get my latest blog post in your inbox."
+msgstr ""
+"Bem-vindo ao meu blog. Subscreva e receba o meu último post de blog na sua "
+"caixa de entrada."
+
+#: home/templates/home/blog-home-alt.html:39
+#: home/templates/home/blog-post.html:15
+msgid "Published"
+msgstr "Publicado em"
+
+#: home/templates/home/blog-home-alt.html:41
+#: home/templates/home/index.html:175
+msgid "Read more"
+msgstr "Leia mais"
+
+#: home/templates/home/blog-home-alt.html:53
+msgid "Next"
+msgstr "Próximo"
+
+#: home/templates/home/blog-home-alt.html:55
+msgid "Previous"
+msgstr "Anterior"
+
+#: home/templates/home/contact.html:13
+msgid ""
+"Interested in hiring me for your project or just want to say hi? You can "
+"fill in the contact form below or send me an email to"
+msgstr ""
+"Interessado em contratar-me para o seu projecto ou apenas quer dizer olá? "
+"Você pode preencher o formulário de contato abaixo ou me enviar um e-mail "
+"para"
+
+#: home/templates/home/contact.html:14
+msgid "Want to get connected? Follow me on the social channels below"
+msgstr "Quer se conectar? Siga-me nos canais sociais abaixo"
+
+#: home/templates/home/contact.html:41
+msgid "Get In Touch"
+msgstr "Entre em Contato"
+
+#: home/templates/home/contact.html:46
+msgid "Name:"
+msgstr "Nome:"
+
+#: home/templates/home/contact.html:51
+msgid "Email:"
+msgstr "Email:"
+
+#: home/templates/home/contact.html:56
+msgid "Question:"
+msgstr "Pergunta:"
+
+#: home/templates/home/contact.html:59
+msgid "Want to know what's included in each package? Check the"
+msgstr ""
+
+#: home/templates/home/contact.html:59 home/templates/home/index.html:56
+msgid "Services &amp; Pricing"
+msgstr ""
+
+#: home/templates/home/contact.html:59
+msgid "page"
+msgstr ""
+
+#: home/templates/home/contact.html:63 home/templates/home/contact.html:68
+msgid "Message:"
+msgstr ""
+
+#: home/templates/home/contact.html:76
+msgid "Send Now"
+msgstr ""
+
+#: home/templates/home/courses.html:12 home/templates/home/index.html:140
+msgid "Course Certificates"
+msgstr ""
+
+#: home/templates/home/courses.html:14
+msgid ""
+"Welcome to my online portfolio. Here is a list of Courses / Certificates "
+"that I have taken in my career in Programmming and Data Analysis. I'm taking"
+" on freelance work at the moment. Want some help building your software?"
+msgstr ""
+
+#: home/templates/home/courses.html:17
+#: home/templates/home/pages/header.html:97
+msgid "Hire Me"
+msgstr ""
+
+#: home/templates/home/courses.html:26
+msgid "All"
+msgstr ""
+
+#: home/templates/home/courses.html:27
+msgid "Databases"
+msgstr ""
+
+#: home/templates/home/courses.html:28
+msgid "Programming"
+msgstr "Programação"
+
+#: home/templates/home/courses.html:29
+msgid "Security"
+msgstr "Segurança"
+
+#: home/templates/home/courses.html:30
+msgid "DevOps"
+msgstr "DevOps"
+
+#: home/templates/home/courses.html:31
+msgid "Excel"
+msgstr "Excel"
+
+#: home/templates/home/courses.html:32
+msgid "Backend"
+msgstr "Backend"
+
+#: home/templates/home/courses.html:48
+msgid "Obtained:"
+msgstr "Obtido:"
+
+#: home/templates/home/courses.html:48
+msgid "Platform:"
+msgstr "Plataforma:"
+
+#: home/templates/home/index.html:17
+msgid ""
+"\n"
+"\t\t\t\t\t\t\tMy name is Javier Jaramillo. I am a Data Analyst & future full stack developer from Ecuador. I work \n"
+"\t\t\t\t\t\t\tas a python Data Analyst and contribute to create dashboards and other analytical tools. \n"
+"\t\t\t\t\t\t\tMy current interest is on: Streamlit, Django, Image Processing, Data Science, Machine Learning, Deep Learning. I write about software development on\n"
+"\t\t\t\t\t\t\t"
+msgstr ""
+"\n"
+"O meu nome é Javier Jaramillo. Eu sou um Analista de Dados e futuro desenvolvedor de pilha cheia do Equador. Eu trabalho como Analista de Dados python e contribuir para a criação de dashboards e outras ferramentas analíticas.\n"
+"O meu interesse actual está em: Streamlit, Django, Processamento de Imagem, Ciência de Dados, Aprendizagem de Máquina, Aprendizagem Profunda. Eu escrevo sobre desenvolvimento de software em"
+
+#: home/templates/home/index.html:22
+msgid "my blog"
+msgstr "meu blog"
+
+#: home/templates/home/index.html:23
+msgid ". Want to know how I may help your project? Check out my project "
+msgstr ""
+". Quer saber como eu posso ajudar o seu projeto? Confira o meu projeto"
+
+#: home/templates/home/index.html:24
+msgid "portfolio"
+msgstr ""
+
+#: home/templates/home/index.html:24
+msgid "and"
+msgstr ""
+
+#: home/templates/home/index.html:24
+msgid "online resume"
+msgstr ""
+
+#: home/templates/home/index.html:27 home/templates/home/index.html:28
+msgid "View"
+msgstr ""
+
+#: home/templates/home/index.html:27 home/templates/home/pages/header.html:37
+msgid "Portfolio"
+msgstr ""
+
+#: home/templates/home/index.html:28 home/templates/home/pages/header.html:43
+msgid "Resume"
+msgstr ""
+
+#: home/templates/home/index.html:41
+msgid "What I do"
+msgstr ""
+
+#: home/templates/home/index.html:67
+msgid "Testimonials"
+msgstr ""
+
+#: home/templates/home/index.html:102
+msgid "Featured Projects"
+msgstr ""
+
+#: home/templates/home/index.html:123 home/templates/home/portfolio.html:56
+msgid "View Case Study"
+msgstr ""
+
+#: home/templates/home/index.html:131
+msgid "View Portfolio"
+msgstr ""
+
+#: home/templates/home/index.html:157
+msgid "View Course Certificates"
+msgstr ""
+
+#: home/templates/home/index.html:166
+msgid "Latest Blog Posts"
+msgstr ""
+
+#: home/templates/home/index.html:184
+msgid "View Blog"
+msgstr ""
+
+#: home/templates/home/pages/header.html:34
+msgid "About Me"
+msgstr ""
+
+#: home/templates/home/pages/header.html:40
+msgid "Courses &amp; Certificates"
+msgstr ""
+
+#: home/templates/home/pages/header.html:46
+msgid "Blog"
+msgstr ""
+
+#: home/templates/home/pages/header.html:49
+msgid "Contact"
+msgstr ""
+
+#: home/templates/home/pages/header.html:53
+msgid "More Pages"
+msgstr ""
+
+#: home/templates/home/pages/header.html:56
+msgid "Project Page"
+msgstr ""
+
+#: home/templates/home/pages/header.html:57
+msgid "Blog Home 1"
+msgstr ""
+
+#: home/templates/home/pages/header.html:58
+msgid "Blog Home 2"
+msgstr ""
+
+#: home/templates/home/pages/header.html:59
+msgid "Blog Post"
+msgstr ""
+
+#: home/templates/home/pages/header.html:64
+msgid "Language"
+msgstr ""
+
+#: home/templates/home/pages/header.html:102
+msgid "Dark Mode"
+msgstr ""
+
+#: home/templates/home/resume.html:11
+msgid "Online Resume"
+msgstr ""
+
+#: home/templates/home/resume.html:12
+msgid "Download PDF Version"
+msgstr ""
+
+#: home/templates/home/resume.html:21
+msgid "Data Analyst / Data Engineer"
+msgstr ""
+
+#: home/templates/home/resume.html:28
+msgid "New York"
+msgstr ""
+
+#: home/templates/home/resume.html:43
+msgid ""
+"Motivated and dedicated professional with expertise in research analysis, "
+"data analysis and project management. Proven track record of success in "
+"client support and training. Demonstrates expert insight and proficiency in "
+"enforcing policies and procedures. Skilled and collaborative team player "
+"with experience in analyzing, coordinating, planning and supporting daily "
+"operations."
+msgstr ""
+
+#: home/templates/home/resume.html:54
+msgid "Work Experiences"
+msgstr ""
+
+#: home/templates/home/resume.html:76
+msgid "Projects"
+msgstr ""
+
+#: home/templates/home/resume.html:167
+msgid "(Professional)"
+msgstr ""
+
+#: home/templates/home/resume.html:168
+msgid "(Native)"
+msgstr ""
+
+#: mysite/settings.py:199
+msgid "English"
+msgstr ""
+
+#: mysite/settings.py:200
+msgid "French"
+msgstr ""
+
+#: mysite/settings.py:201
+msgid "Spanish"
+msgstr ""
+
+#: mysite/settings.py:202
+msgid "Brazilian Portuguese"
+msgstr ""
+
+#: mysite/urls.py:34
+msgid "admin/"
+msgstr ""
