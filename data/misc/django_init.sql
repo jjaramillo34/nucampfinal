@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS nucamp_final_db;
-CREATE DATABASE nucamp_final_db;
+DROP DATABASE IF EXISTS portfolio_db;
+CREATE DATABASE portfolio_db;
 
-\c nucamp_final_db
+\c portfolio_db
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
