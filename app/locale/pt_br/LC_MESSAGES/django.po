@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-13 14:08-0400\n"
-"PO-Revision-Date: 2022-08-13 14:47-0400\n"
+"POT-Creation-Date: 2022-08-14 10:37-0400\n"
+"PO-Revision-Date: 2022-08-14 10:49-0400\n"
 "Last-Translator:   <admin@datanaly.st>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -82,6 +82,26 @@ msgstr "A sua mensagem tem sido enviada com sucesso"
 msgid "Oops... something went wrong with the form"
 msgstr "Oops... algo correu mal com o formulário."
 
+#: home/templates/home/404.html:68
+msgid ""
+"Maybe this page moved? Got deleted? Is hiding out in quarantine? Never "
+"existed in the first place?"
+msgstr ""
+"Talvez esta página se tenha movido? Foi apagada? Está escondida em "
+"quarentena? Nunca existiu em primeiro lugar?"
+
+#: home/templates/home/404.html:69
+msgid "Let's go "
+msgstr "Vamos."
+
+#: home/templates/home/404.html:69
+msgid "home"
+msgstr "página inicial"
+
+#: home/templates/home/404.html:69
+msgid " and try from there."
+msgstr "e tente a partir daí."
+
 #: home/templates/home/blog-home-alt.html:10
 msgid "A Blog About Software Development And Life"
 msgstr "Um Blog sobre Desenvolvimento de Software e Vida"
@@ -142,27 +162,27 @@ msgstr "Pergunta:"
 
 #: home/templates/home/contact.html:59
 msgid "Want to know what's included in each package? Check the"
-msgstr ""
+msgstr "Quer saber o que está incluído em cada pacote? Verifique o"
 
 #: home/templates/home/contact.html:59 home/templates/home/index.html:56
 msgid "Services &amp; Pricing"
-msgstr ""
+msgstr "Serviços &amp; Preços"
 
 #: home/templates/home/contact.html:59
 msgid "page"
-msgstr ""
+msgstr "página"
 
 #: home/templates/home/contact.html:63 home/templates/home/contact.html:68
 msgid "Message:"
-msgstr ""
+msgstr "Mensagem:"
 
 #: home/templates/home/contact.html:76
 msgid "Send Now"
-msgstr ""
+msgstr "Enviar Agora"
 
 #: home/templates/home/courses.html:12 home/templates/home/index.html:140
 msgid "Course Certificates"
-msgstr ""
+msgstr "Certificados do Curso"
 
 #: home/templates/home/courses.html:14
 msgid ""
@@ -170,19 +190,23 @@ msgid ""
 "that I have taken in my career in Programmming and Data Analysis. I'm taking"
 " on freelance work at the moment. Want some help building your software?"
 msgstr ""
+"Bem-vindo ao meu portfólio online. Aqui está uma lista de Cursos / "
+"Certificados que eu fiz na minha carreira em Programação e Análise de Dados."
+" Estou assumindo trabalhos freelance no momento. Quer ajuda para construir o"
+" seu software?"
 
 #: home/templates/home/courses.html:17
 #: home/templates/home/pages/header.html:97
 msgid "Hire Me"
-msgstr ""
+msgstr "Contrate-Me"
 
 #: home/templates/home/courses.html:26
 msgid "All"
-msgstr ""
+msgstr "Todos"
 
 #: home/templates/home/courses.html:27
 msgid "Databases"
-msgstr ""
+msgstr "Bases de Dados"
 
 #: home/templates/home/courses.html:28
 msgid "Programming"
@@ -235,119 +259,119 @@ msgstr ""
 
 #: home/templates/home/index.html:24
 msgid "portfolio"
-msgstr ""
+msgstr "portfólio"
 
 #: home/templates/home/index.html:24
 msgid "and"
-msgstr ""
+msgstr "e"
 
 #: home/templates/home/index.html:24
 msgid "online resume"
-msgstr ""
+msgstr "currículo on-line"
 
 #: home/templates/home/index.html:27 home/templates/home/index.html:28
 msgid "View"
-msgstr ""
+msgstr "Ver"
 
 #: home/templates/home/index.html:27 home/templates/home/pages/header.html:37
 msgid "Portfolio"
-msgstr ""
+msgstr "Portfólio"
 
 #: home/templates/home/index.html:28 home/templates/home/pages/header.html:43
 msgid "Resume"
-msgstr ""
+msgstr "Curriculum Vitae"
 
 #: home/templates/home/index.html:41
 msgid "What I do"
-msgstr ""
+msgstr "O que eu faço"
 
 #: home/templates/home/index.html:67
 msgid "Testimonials"
-msgstr ""
+msgstr "Testemunhos / Testimonials"
 
 #: home/templates/home/index.html:102
 msgid "Featured Projects"
-msgstr ""
+msgstr "Projetos em Destaque"
 
 #: home/templates/home/index.html:123 home/templates/home/portfolio.html:56
 msgid "View Case Study"
-msgstr ""
+msgstr "Veja o Estudo de Caso"
 
 #: home/templates/home/index.html:131
 msgid "View Portfolio"
-msgstr ""
+msgstr "Ver Portfólio"
 
 #: home/templates/home/index.html:157
 msgid "View Course Certificates"
-msgstr ""
+msgstr "Ver Certificados do Curso"
 
 #: home/templates/home/index.html:166
 msgid "Latest Blog Posts"
-msgstr ""
+msgstr "Últimos posts do Blog"
 
 #: home/templates/home/index.html:184
 msgid "View Blog"
-msgstr ""
+msgstr "Ver Blog"
 
 #: home/templates/home/pages/header.html:34
 msgid "About Me"
-msgstr ""
+msgstr "Sobre Mim"
 
 #: home/templates/home/pages/header.html:40
 msgid "Courses &amp; Certificates"
-msgstr ""
+msgstr "Cursos & Certificados"
 
 #: home/templates/home/pages/header.html:46
 msgid "Blog"
-msgstr ""
+msgstr "Blog"
 
 #: home/templates/home/pages/header.html:49
 msgid "Contact"
-msgstr ""
+msgstr "Contato"
 
 #: home/templates/home/pages/header.html:53
 msgid "More Pages"
-msgstr ""
+msgstr "Mais Páginas"
 
 #: home/templates/home/pages/header.html:56
 msgid "Project Page"
-msgstr ""
+msgstr "Página do Projeto"
 
 #: home/templates/home/pages/header.html:57
 msgid "Blog Home 1"
-msgstr ""
+msgstr "Página inicial do Blog 1"
 
 #: home/templates/home/pages/header.html:58
 msgid "Blog Home 2"
-msgstr ""
+msgstr "Página inicial do Blog 2"
 
 #: home/templates/home/pages/header.html:59
 msgid "Blog Post"
-msgstr ""
+msgstr "Publicação no Blog"
 
 #: home/templates/home/pages/header.html:64
 msgid "Language"
-msgstr ""
+msgstr "Idioma"
 
 #: home/templates/home/pages/header.html:102
 msgid "Dark Mode"
-msgstr ""
+msgstr "Modo Escuro"
 
 #: home/templates/home/resume.html:11
 msgid "Online Resume"
-msgstr ""
+msgstr "Currículo online"
 
 #: home/templates/home/resume.html:12
 msgid "Download PDF Version"
-msgstr ""
+msgstr "Descarregar versão PDF"
 
 #: home/templates/home/resume.html:21
 msgid "Data Analyst / Data Engineer"
-msgstr ""
+msgstr "Analista de Dados / Engenheiro de Dados"
 
 #: home/templates/home/resume.html:28
 msgid "New York"
-msgstr ""
+msgstr "Nova Lorque"
 
 #: home/templates/home/resume.html:43
 msgid ""
@@ -358,39 +382,45 @@ msgid ""
 "with experience in analyzing, coordinating, planning and supporting daily "
 "operations."
 msgstr ""
+"Profissional motivado e dedicado com experiência em análise de pesquisa, "
+"análise de dados e gerenciamento de projetos. Histórico comprovado de "
+"sucesso no apoio ao cliente e na formação. Demonstra perspicácia e "
+"proficiência na aplicação de políticas e procedimentos. Profissional com "
+"experiência em análise, coordenação, planejamento e apoio às operações "
+"diárias."
 
 #: home/templates/home/resume.html:54
 msgid "Work Experiences"
-msgstr ""
+msgstr "Experiências de Trabalho"
 
 #: home/templates/home/resume.html:76
 msgid "Projects"
-msgstr ""
+msgstr "Projetos"
 
 #: home/templates/home/resume.html:167
 msgid "(Professional)"
-msgstr ""
+msgstr "(Profissional)"
 
 #: home/templates/home/resume.html:168
 msgid "(Native)"
-msgstr ""
-
-#: mysite/settings.py:199
-msgid "English"
-msgstr ""
+msgstr "(Nativo)"
 
 #: mysite/settings.py:200
-msgid "French"
-msgstr ""
+msgid "English"
+msgstr "Inglês"
 
 #: mysite/settings.py:201
-msgid "Spanish"
-msgstr ""
+msgid "French"
+msgstr "Francês"
 
 #: mysite/settings.py:202
-msgid "Brazilian Portuguese"
-msgstr ""
+msgid "Spanish"
+msgstr "Espanhol"
 
-#: mysite/urls.py:34
+#: mysite/settings.py:203
+msgid "Brazilian Portuguese"
+msgstr "Português Brasileiro"
+
+#: mysite/urls.py:35
 msgid "admin/"
-msgstr ""
+msgstr "admin/"
