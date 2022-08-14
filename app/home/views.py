@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.shortcuts import redirect
 from home.models import Home
 from projects.models import Project
 from courses.models import Course
@@ -28,3 +29,4 @@ def home(request):
         template_name="home/index.html",
         context=context
     )
+    

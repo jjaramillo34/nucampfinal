@@ -15,14 +15,16 @@ Including another URLconf
 """
 from django.conf import settings
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, re_path, include
 from django.conf.urls import handler403
 from django.conf.urls.i18n import i18n_patterns
 from django.utils.translation import gettext_lazy as _
+from django.conf.urls.static import static
 from django.contrib.sitemaps import views
 from .sitemaps import StaticViewSitemap
 from blog.sitemaps import PostSitemap
 from courses.sitemaps import CoursesSitemap
+from django.conf.urls import handler404, handler500, handler403, handler400
 
 sitemaps = {
     'static': StaticViewSitemap,
@@ -32,6 +34,7 @@ sitemaps = {
 
 urlpatterns = i18n_patterns(
     path(_('admin/'), admin.site.urls),
+    #path("", include(static_urlpatterns)),
     path('', include('home.urls')),
     path('contact/', include('contact.urls')),
     path('portfolio/', include('projects.urls')),
@@ -44,11 +47,16 @@ urlpatterns = i18n_patterns(
     path('rosetta/', include('rosetta.urls')),  # NEW
     path('tinymce/', include('tinymce.urls')),
     #path('__debug__/', include('debug_toolbar.urls')),
-    #path('sitemap.xml', sitemap, {'sitemaps': {'blog': GenericSitemap(info_dict, priority=0.6)}}, name='django.contrib.sitemaps.views.sitemap'),
-    
     path('sitemap.xml', views.index, {'sitemaps': sitemaps},
          name='django.contrib.sitemaps.views.index'),
     path('sitemap-<section>.xml', views.sitemap, {'sitemaps': sitemaps},
          name='django.contrib.sitemaps.views.sitemap'),
-    
-)
+) 
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+handler400 = 'mysite.views.page_bad_request'
+handler403 = 'mysite.views.page_forbidden'
+handler404 = 'mysite.views.page_not_found_view'
+handler500 = 'mysite.views.page_internal_error'
