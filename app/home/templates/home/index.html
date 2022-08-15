@@ -1,0 +1,195 @@
+{% extends "home/base.html" %}
+{% block title %} Home Page {% endblock title%}
+{% load static %}
+{% load humanize %}
+{% load i18n %}
+
+{% block content %}	
+	<div class="main-wrapper">		
+		<section class="about-me-section p-3 p-lg-5 theme-bg-light">
+			<div class="container">
+				<div class="profile-teaser row">
+					{% for setting in homepage %}
+					<div class="col">
+						<h2 class="name font-weight-bold mb-1">{{ setting.name }}</h2>
+						<div class="tagline mb-3">{{ setting.title }}</div>
+						<div class="bio mb-4" style="text-align: justify; text-justify: inter-word;">
+							{% blocktrans %}
+							My name is Javier Jaramillo. I am a Data Analyst & future full stack developer from Ecuador. I work 
+							as a python Data Analyst and contribute to create dashboards and other analytical tools. 
+							My current interest is on: Streamlit, Django, Image Processing, Data Science, Machine Learning, Deep Learning. I write about software development on
+							{% endblocktrans %}
+							<a class="text-link" href="{% url 'blog:blog' %}">{% trans 'my blog'%}</a>
+							{% trans '. Want to know how I may help your project? Check out my project '%}
+							<a class="text-link" href="{% url 'projects:portfolio' %}">{% trans 'portfolio'%}</a> {% trans 'and'%} <a class="text-link" href="{% url 'resume:resume' %}">{% trans 'online resume'%}</a>.
+						</div><!--//bio-->
+						<div class="mb-4">
+							<a class="btn btn-primary me-2 mb-3" href="{% url 'projects:portfolio' %}"><i class="fas fa-arrow-alt-circle-right me-2"></i><span class="d-none d-md-inline">{% trans 'View'%}</span> {% trans 'Portfolio'%}</a>
+							<a class="btn btn-secondary mb-3" href="{% url 'resume:resume' %}"><i class="fas fa-file-alt me-2"></i><span class="d-none d-md-inline">{% trans 'View'%}</span> {% trans 'Resume'%}</a>
+						</div>
+					</div><!--//col-->
+					{% endfor %}
+					<div class="col-md-5 col-lg-5">
+					    <img class="profile-image img-fluid mb-3 mb-lg-0 me-md-0" src="{% static 'assets/images/profile-lg.jpg' %}" alt="">
+					</div>
+				</div>
+			</div>
+		</section><!--//about-me-section-->
+		
+		<section class="overview-section p-3 p-lg-5">
+			<div class="container">
+				<h2 class="section-title font-weight-bold mb-3">{% trans 'What I do'%}</h2>
+				<div class="section-intro mb-5">I have more than 10 years' experience building software for clients all over the world. Below is a quick overview of my main technical skill sets and technologies I use. Want to find out more about my experience? Check out my <a class="text-link" href="{% url 'resume:resume' %}">online resume</a> and <a class="text-link" href="{% url 'projects:portfolio' %}">project portfolio</a>.</div>
+				<div class="row">
+					{% for service in services %}
+					<div class="item col-6 col-lg-3">
+						<div class="item-inner">
+							<div class="item-icon">
+								{{ service.icon|safe }}
+							</div>
+							<h3 class="item-title">{{ service.title }}</h3>
+							<div class="item-desc">{{ service.content|truncatechars:250 }}</div>
+						</div><!--//item-inner-->
+					</div><!--//item-->
+					{% endfor %}
+				</div><!--//row-->
+				<div class="text-center py-3"><a href="services.html" class="btn btn-primary"><i class="fas fa-arrow-alt-circle-right me-2"></i>{% trans "Services &amp; Pricing"%}
+					
+				</a></div>
+				
+			</div><!--//container-->
+		</section>
+		
+		<div class="container"><hr></div>
+		
+		<section class="testimonials-section p-3 p-lg-5">
+			<div class="container">
+				<h2 class="section-title font-weight-bold mb-5">{% trans "Testimonials"%}</h2>
+				
+				<div class="testiomonial-carousel-container">
+					<div class="testimonial-carousel  tiny-slider">
+						{% for testimonial in testimonials %}
+	                    <div class="item">
+							<div class="item-inner">
+								<div class="quote-holder">
+									<blockquote class="quote-content" style="text-align:justify; font-size:13px">
+										{{ testimonial.description|truncatechars:400 }}
+									</blockquote>
+									<i class="fas fa-quote-left"></i>
+								</div><!--//quote-holder-->
+								<div class="source-holder">
+									<div class="source-profile">
+										<img src="{{ testimonial.img.url }}" alt="image"/>
+									</div>
+									<div class="meta">
+										<div class="name">{{ testimonial.name }}</div>
+										<div class="info">{{ testimonial.title }}</div>
+									</div>
+								</div>
+							</div><!--//item-inner-->
+						</div><!--//item-->
+						{% endfor %}
+						
+					</div><!--//testimonial-carousel-->	
+				</div><!--//testimonial-carousel-container-->	
+			</div><!--//container-->
+		</section><!--//testimonials-section-->
+		
+		<div class="container"><hr></div>
+		
+		<section class="featured-section p-3 p-lg-5">
+			<div class="container">
+				<h2 class="section-title font-weight-bold mb-5">{% trans "Featured Projects"%}</h2>
+				<div class="row">
+					{% for project in projects %}
+					<div class="col-md-6 mb-5">
+						<div class="card project-card">
+							<div class="row no-gutters">
+								<div class="col-12 col-xl-5 card-img-holder">
+									<img src="{{ project.cover.url }}" class="card-img" alt="image">
+								</div>
+								<div class="col-12 col-xl-7">
+									<div class="card-body">
+										<h5 class="card-title"><a href="project.html" class="theme-link">{{ project.title }}</a></h5>
+										<p class="card-text">{{ project.description|truncatechars:200 }}</p>
+										<p class="card-text"><small class="text-muted">Client: Google</small></p>
+									</div>
+								</div>
+							</div>
+							<div class="link-mask">
+								<a class="link-mask-link" href="project.html"></a>
+								<div class="link-mask-text">
+									<a class="btn btn-secondary" href="project.html">
+										<i class="fas fa-eye me-2"></i>{% trans "View Case Study"%}
+									</a>
+								</div>
+							</div><!--//link-mask-->
+						</div><!--//card-->
+					</div><!--//col-->
+					{% endfor %}
+				</div><!--//row-->
+				<div class="text-center py-3"><a href="{% url 'projects:portfolio' %}" class="btn btn-primary"><i class="fas fa-arrow-alt-circle-right me-2"></i>{% trans "View Portfolio"%}</a></div>
+				
+			</div><!--//container-->
+		</section><!--//featured-section-->
+		
+		<div class="container"><hr></div>
+
+		<section class="featured-section p-3 p-lg-5">
+			<div class="container">
+				<h2 class="section-title font-weight-bold mb-5">{% trans "Course Certificates"%}</h2>
+				<div class="row">
+					{% for course in courses %}
+					<div class="col-md-4 mb-5">
+						<div class="card blog-post-card">
+							<img class="card-img-top" src="{{ course.cover.url }}" alt="image">
+							<div class="card-body">
+								<h5 class="card-title"><a class="theme-link" href="{{ course.link }}" target="_blank">{{ course.title }}</a></h5>
+								<p class="card-text">{{ course.description|truncatechars:200 }}</p>
+							</div>
+							<div class="card-footer">
+								<small class="text-muted">Obtained: {{ course.obtained_date|naturalday }}</small>
+							</div>
+						</div><!--//card-->
+					</div><!--//col-->
+					{% endfor %}
+				</div><!--//row-->
+				<div class="text-center py-3"><a href="{% url 'courses:courses' %}" class="btn btn-primary"><i class="fas fa-arrow-alt-circle-right me-2"></i>{% trans "View Course Certificates"%}</a></div>
+				
+			</div><!--//container-->
+		</section><!--//featured-section-->
+		
+		<div class="container"><hr></div>
+		
+		<section class="latest-blog-section p-3 p-lg-5">
+			<div class="container">
+				<h2 class="section-title font-weight-bold mb-5">{% trans "Latest Blog Posts"%}</h2>
+				<div class="row">
+					{% for post in posts %}
+					<div class="col-md-4 mb-5">
+						<div class="card blog-post-card">
+							<img class="card-img-top" src="{{ post.cover.url }}" alt="image">
+							<div class="card-body">
+								<h5 class="card-title"><a class="theme-link" href="{% url 'blog:post_detail' post.slug  %}">{{ post.title }}</a></h5>
+								<p class="card-text">{{ post.content|truncatechars:400 }}</p>
+								<p class="mb-0"><a class="text-link" href="{% url 'blog:post_detail' post.slug  %}">{% trans "Read more"%} &rarr;</a></p>
+							</div>
+							<div class="card-footer">
+								<small class="text-muted">{{ post.created_on|naturalday }}</small>
+							</div>
+						</div><!--//card-->
+					</div><!--//col-->
+					{% endfor %}
+				</div><!--//row-->
+				<div class="text-center py-3"><a href="{% url 'blog:blog' %}" class="btn btn-primary"><i class="fas fa-arrow-alt-circle-right me-2"></i>{% trans "View Blog"%}</a></div>
+			</div><!--//container-->
+			
+		</section><!--//latest-blog-section-->
+
+		<footer class="footer text-center py-4">
+			<small class="copyright">Copyright &copy; <a href="https://themes.3rdwavemedia.com/" target="_blank">Javier Jaramillo.</a></small>
+		</footer>
+		
+	</div><!--//main-wrapper-->
+
+{% endblock content %}

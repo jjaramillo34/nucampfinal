@@ -1,0 +1,68 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+	<title>DevCard - &amp; Portfolio Javier Jaramillo</title>
+	
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="DevCard Bootstrap 5 Template">
+	<meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+	<link rel="shortcut icon" href="{% static 'favicon.ico'%}">
+    
+    {% block stylesheets %}
+	
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+	
+	<!-- FontAwesome JS -->
+    <script defer src="{% static 'assets/fontawesome/js/all.js'%}"></script>
+    
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="{% static 'assets/plugins/tiny-slider/tiny-slider.css' %}">
+
+	<!-- Theme CSS -->  
+	<link id="theme-style" rel="stylesheet" href="{% static 'assets/css/theme-2.css' %}">
+
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
+	
+	<li class="theme-2  list-inline-item"><a data-style="{% static 'assets/css/theme-2.css' %}" href="#"></a></li>
+
+    {% endblock stylesheets %}
+
+</head> 
+
+<body>
+	
+	{% include "home/pages/header.html" %}
+	<!-- Main Content-->
+    {% block content %}{% endblock content %}
+	
+    {% block scripts %}
+	<!-- Javascript -->
+	<script src="{% static 'assets/plugins/popper.min.js' %}"></script> 
+	<script src="{% static 'assets/plugins/bootstrap/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'assets/plugins/tiny-slider/min/tiny-slider.js' %}"></script>
+	<script src="{% static 'assets/js/testimonials.js' %}"></script>
+	<!--Page Specific JS -->
+    <script type="text/javascript" src="{% static 'assets/plugins/imagesloaded.pkgd.min.js' %}"></script> 
+    <script type="text/javascript" src="{% static 'assets/plugins/isotope.pkgd.min.js' %}"></script>
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    <script type="text/javascript" src="{% static 'assets/js/isotope-custom.js'%}"></script>
+    
+	<!-- Dark Mode -->
+	<script src="{% static 'assets/plugins/js-cookie.min.js' %}"></script>
+	<script src="{% static 'assets/js/dark-mode.js' %}"></script>
+    {% endblock scripts %}
+
+    {% block extrascripts %}{% endblock extrascripts %}
+	
+</body>
+</html> 
+

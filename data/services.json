@@ -1,0 +1,161 @@
+[{
+        "model": "services.servicestranslation",
+        "pk": 1,
+        "fields": {
+            "language_code": "en",
+            "title": "Python & Django",
+            "content": "Praesent nec nisl a purus blandit viverra. Praesent egestas neque eu enim. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Vestibulum volutpat pretium libero. Curabitur nisi.\r\n\r\nUt non enim eleifend felis pretium feugiat. Proin pretium, leo ac pellentesque mollis, felis nunc ultrices eros, sed gravida augue augue mollis justo. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Duis vel nibh at velit scelerisque suscipit. Mauris sollicitudin fermentum libero.",
+            "master": 1
+        }
+    },
+    {
+        "model": "services.servicestranslation",
+        "pk": 2,
+        "fields": {
+            "language_code": "en",
+            "title": "R",
+            "content": "Phasellus consectetuer vestibulum elit. Etiam iaculis nunc ac metus. Morbi mattis ullamcorper velit. Sed a libero. Vestibulum dapibus nunc ac augue.\r\n\r\nEtiam rhoncus. Nullam tincidunt adipiscing enim. Donec posuere vulputate arcu. Aenean commodo ligula eget dolor..",
+            "master": 2
+        }
+    },
+    {
+        "model": "services.servicestranslation",
+        "pk": 3,
+        "fields": {
+            "language_code": "en",
+            "title": "Streamlit",
+            "content": "Nullam sagittis. Nunc sed turpis. Fusce ac felis sit amet ligula pharetra condimentum. Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus. Donec sodales sagittis magna.\r\n\r\nNulla facilisi. Vivamus euismod mauris. Ut varius tincidunt libero. Phasellus gravida semper nisi. Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi sem ut ipsum.",
+            "master": 3
+        }
+    },
+    {
+        "model": "services.servicestranslation",
+        "pk": 4,
+        "fields": {
+            "language_code": "en",
+            "title": "Selenium",
+            "content": "Proin sapien ipsum, porta a, auctor quis, euismod ut, mi. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Donec vitae orci sed dolor rutrum auctor. Nam ipsum risus, rutrum vitae, vestibulum eu, molestie vel, lacus. Phasellus consectetuer vestibulum elit.\r\n\r\nEtiam vitae tortor. Pellentesque ut neque. Donec interdum, metus et hendrerit aliquet, dolor diam sagittis ligula, eget egestas libero turpis vel mi. In ac felis quis tortor malesuada pretium. In hac habitasse platea dictumst.",
+            "master": 4
+        }
+    },
+    {
+        "model": "services.servicestranslation",
+        "pk": 5,
+        "fields": {
+            "language_code": "en",
+            "title": "OpenCV",
+            "content": "Etiam iaculis nunc ac metus. Vivamus in erat ut urna cursus vestibulum. Praesent egestas neque eu enim. Curabitur at lacus ac velit ornare lobortis. Suspendisse feugiat.\r\n\r\nPraesent congue erat at massa. Phasellus viverra nulla ut metus varius laoreet. Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus. Nullam tincidunt adipiscing enim. Phasellus ullamcorper ipsum rutrum nunc.",
+            "master": 5
+        }
+    },
+    {
+        "model": "services.servicestranslation",
+        "pk": 6,
+        "fields": {
+            "language_code": "en",
+            "title": "Excel & Tableau 🌜",
+            "content": "Proin pretium, leo ac pellentesque mollis, felis nunc ultrices eros, sed gravida augue augue mollis justo. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Cras risus ipsum, faucibus ut, ullamcorper id, varius ac, leo. Curabitur turpis. Praesent blandit laoreet nibh.\r\n\r\nDonec sodales sagittis magna. Cras sagittis. Nulla facilisi. Nunc nulla. Vivamus elementum semper nisi.",
+            "master": 6
+        }
+    },
+    {
+        "model": "services.servicestranslation",
+        "pk": 7,
+        "fields": {
+            "language_code": "en",
+            "title": "PostgresSQL & MongoDB",
+            "content": "Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Suspendisse eu ligula. Curabitur nisi. Phasellus accumsan cursus velit. Maecenas egestas arcu quis ligula mattis placerat.\r\n\r\nSuspendisse feugiat. Maecenas ullamcorper, dui et placerat feugiat, eros pede varius nisi, condimentum viverra felis nunc et lorem. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Cras dapibus. Aenean ut eros et nisl sagittis vestibulum.",
+            "master": 7
+        }
+    },
+    {
+        "model": "services.servicestranslation",
+        "pk": 8,
+        "fields": {
+            "language_code": "en",
+            "title": "AWS",
+            "content": "Maecenas egestas arcu quis ligula mattis placerat. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nunc interdum lacus sit amet orci. Ut a nisl id ante tempus hendrerit. Vestibulum rutrum, mi nec elementum vehicula, eros quam gravida nisl, id fringilla neque ante vel mi.\r\n\r\nCurabitur ullamcorper ultricies nisi. Maecenas egestas arcu quis ligula mattis placerat. Curabitur vestibulum aliquam leo. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+            "master": 8
+        }
+    },
+    {
+        "model": "services.services",
+        "pk": 1,
+        "fields": {
+            "icon": "<img src=\"https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue\" />\r\n<img src=\"https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white\"/>",
+            "updated_on": "2022-08-07T17:06:18.219Z",
+            "created_on": "2022-08-07T16:08:26.660Z",
+            "status": 1
+        }
+    },
+    {
+        "model": "services.services",
+        "pk": 2,
+        "fields": {
+            "icon": "<img src=\"https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white\" />",
+            "updated_on": "2022-08-07T17:08:22.463Z",
+            "created_on": "2022-08-07T17:08:22.463Z",
+            "status": 1
+        }
+    },
+    {
+        "model": "services.services",
+        "pk": 3,
+        "fields": {
+            "icon": "<img src=\"https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white\" />",
+            "updated_on": "2022-08-07T17:11:47.503Z",
+            "created_on": "2022-08-07T17:11:47.503Z",
+            "status": 1
+        }
+    },
+    {
+        "model": "services.services",
+        "pk": 4,
+        "fields": {
+            "icon": "<img src=\"https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=Selenium&logoColor=white\" />",
+            "updated_on": "2022-08-07T17:12:49.652Z",
+            "created_on": "2022-08-07T17:12:49.652Z",
+            "status": 1
+        }
+    },
+    {
+        "model": "services.services",
+        "pk": 5,
+        "fields": {
+            "icon": "<img src=\"https://img.shields.io/badge/OpenCV-27338e?style=for-the-badge&logo=OpenCV&logoColor=white\" />",
+            "updated_on": "2022-08-07T17:14:35.431Z",
+            "created_on": "2022-08-07T17:14:35.431Z",
+            "status": 1
+        }
+    },
+    {
+        "model": "services.services",
+        "pk": 6,
+        "fields": {
+            "icon": "<img src=\"https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white\" />\r\n<img src=\"https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=Tableau&logoColor=white\" />",
+            "updated_on": "2022-08-07T17:15:56.028Z",
+            "created_on": "2022-08-07T17:15:56.028Z",
+            "status": 1
+        }
+    },
+    {
+        "model": "services.services",
+        "pk": 7,
+        "fields": {
+            "icon": "<img src=\"https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white\" />\r\n<img src=\"https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white\" />",
+            "updated_on": "2022-08-07T17:17:09.094Z",
+            "created_on": "2022-08-07T17:17:09.094Z",
+            "status": 1
+        }
+    },
+    {
+        "model": "services.services",
+        "pk": 8,
+        "fields": {
+            "icon": "<img src=\"https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=orange\" />",
+            "updated_on": "2022-08-07T17:19:10.535Z",
+            "created_on": "2022-08-07T17:19:10.535Z",
+            "status": 1
+        }
+    }
+]

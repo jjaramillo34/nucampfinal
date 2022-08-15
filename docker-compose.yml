@@ -1,0 +1,42 @@
+version: "3.8"
+services:
+  web:
+    build: ./app
+    image: 050316712959.dkr.ecr.us-east-1.amazonaws.com/portfolio:portfolio_web
+    #command: sh -c "python manage.py collectstatic --no-input && python manage.py makemigrations && python manage.py migrate"
+    command: gunicorn mysite.wsgi:application --bind 0.0.0.0:8000
+    volumes:
+      - ./app/:/usr/src/app/
+      - static_volume:/usr/src/app/staticfiles
+    ports:
+      - 8080
+    
+    environment:
+      - SECRET_KEY=${SECRET_KEY}
+      - DEBUG=${DEBUG}
+      - CLOUD_NAME=${CLOUD_NAME}
+      - API_KEY=${API_KEY}
+      - API_SECRET=${API_SECRET}
+      - SENDGRID_API_KEY=${SENDGRID_API_KEY}
+      - RECAPTCHA_PUBLIC_KEY=${RECAPTCHA_PUBLIC_KEY}
+      - RECAPTCHA_PRIVATE_KEY=${RECAPTCHA_PRIVATE_KEY}
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
+      - DATABASE=${DATABASE}
+      - VIRTUAL_HOST=${VIRTUAL_HOST}
+      - VIRTUAL_PORT=${VIRTUAL_PORT}
+    
+  nginx:
+    build: ./nginx
+    image: 050316712959.dkr.ecr.us-east-1.amazonaws.com/portfolio:portfolio_nginx
+    volumes:
+      - static_volume:/usr/src/app/staticfiles
+    ports:
+      - 8000:80
+    depends_on:
+      - web
+volumes:
+  static_volume:

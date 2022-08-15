@@ -1,0 +1,22 @@
+# remove all containers
+docker-compose down -rmi all
+
+# build containers and attach pgadmin and djago web
+docker-compose up -d --build
+
+# make django migrations
+docker-compose exec web python manage.py makemigrations --noinput
+docker-compose exec web python manage.py migrate --noinput
+
+# load data to database   
+cat data/blog.json | sudo docker exec -i nucamp_final-web-1 python manage.py loaddata --format=json -
+cat data/contact.json | sudo docker exec -i nucamp_final-web-1 python manage.py loaddata --format=json -
+cat data/courses.json | sudo docker exec -i nucamp_final-web-1 python manage.py loaddata --format=json -
+cat data/home.json | sudo docker exec -i nucamp_final-web-1 python manage.py loaddata --format=json -
+cat data/projects.json | sudo docker exec -i nucamp_final-web-1 python manage.py loaddata --format=json -
+cat data/resume.json | sudo docker exec -i nucamp_final-web-1 python manage.py loaddata --format=json -
+cat data/services.json | sudo docker exec -i nucamp_final-web-1 python manage.py loaddata --format=json -
+cat data/testimonials.json | sudo docker exec -i nucamp_final-web-1 python manage.py loaddata --format=json -
+
+# load messages
+docker-compose exec web django-admin compilemessages --ignore=env
