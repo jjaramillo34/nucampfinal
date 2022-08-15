@@ -26,6 +26,6 @@ django-tinymce
 django-next-prev
 whitenoise
 #django-picklefield
-#django-json-widget
+django-json-widget
 #django-highlightjs
 

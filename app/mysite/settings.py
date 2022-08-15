@@ -71,7 +71,7 @@ INSTALLED_APPS = [
     'rosetta',  # NEW
     'parler',  # NEW
     #'hitcount',
-    #'django_json_widget',
+    'django_json_widget',
     'captcha',
     'tinymce',
     #'highlightjs',
