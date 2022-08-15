@@ -9,7 +9,8 @@ docker-compose exec web python manage.py makemigrations --noinput
 docker-compose exec web python manage.py migrate --noinput
 
 # load data to database   
-cat data/blog.json | sudo docker exec -i nucamp_final-web-1 python manage.py loaddata --format=json -
+#cat data/blog.json | sudo docker exec -i nucamp_final-web-1 python manage.py loaddata --format=json -
+cat data/blog.json | sudo docker exec -i 050316712959.dkr.ecr.us-east-1.amazonaws.com/portfolio_portfolio_web python manage.py loaddata --format=json -
 cat data/contact.json | sudo docker exec -i nucamp_final-web-1 python manage.py loaddata --format=json -
 cat data/courses.json | sudo docker exec -i nucamp_final-web-1 python manage.py loaddata --format=json -
 cat data/home.json | sudo docker exec -i nucamp_final-web-1 python manage.py loaddata --format=json -
