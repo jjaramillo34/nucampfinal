@@ -19,8 +19,9 @@ ENV PYTHONUNBUFFERED=1
 #RUN pip install -r requirements.txt
 # Install pip requirements
 COPY requirements.txt .
-RUN python -m pip install -r requirements.txt
-
+#RUN python -m pip install -r requirements.txt
+RUN --mount=type=cache,target=/root/.cache \
+    pip install -r requirements.txt
 
 # copy entrypoint.sh
 # COPY ./entrypoint.sh /entrypoint.sh
