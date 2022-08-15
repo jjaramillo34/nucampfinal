@@ -67,7 +67,7 @@ INSTALLED_APPS = [
     #"crispy_bootstrap5",
     "widget_tweaks",
     #'bootstrap_modal_forms',
-    #'social_django',
+    'social_django',
     'rosetta',  # NEW
     'parler',  # NEW
     #'hitcount',
@@ -94,20 +94,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     #"debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
-
-HIGHLIGHTJS = {
-    # The URL to the jQuery JavaScript file
-    'jquery_url': '//code.jquery.com/jquery.min.js',
-    # The highlight.js base URL
-    'base_url': '//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/highlight.min.js',
-    # The complete URL to the highlight.js CSS file
-    'css_url': '//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/styles/{0}.min.css',
-    # Include jQuery with highlight.js JavaScript (affects django-highlightjs template tags)
-    'include_jquery': False,
-    # The default used style.
-    'style': 'monokai_sublime',
-    }
-
 
 #INTERNAL_IPS = [
 #    # ...
