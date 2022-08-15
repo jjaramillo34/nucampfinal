@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 import django_heroku
 import dj_database_url
-import environ
+#import environ
 import os
 from pathlib import Path
 from decouple import config
@@ -63,15 +63,15 @@ INSTALLED_APPS = [
     #third party apps
     'ckeditor',
     'ckeditor_uploader',
-    "crispy_forms",
-    "crispy_bootstrap5",
+    #"crispy_forms",
+    #"crispy_bootstrap5",
     "widget_tweaks",
-    'bootstrap_modal_forms',
-    'social_django',
+    #'bootstrap_modal_forms',
+    #'social_django',
     'rosetta',  # NEW
     'parler',  # NEW
     #'hitcount',
-    'django_json_widget',
+    #'django_json_widget',
     'captcha',
     'tinymce',
     #'highlightjs',

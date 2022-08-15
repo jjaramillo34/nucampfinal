@@ -4,18 +4,18 @@ django-cloudinary-storage
 django-heroku
 python-decouple
 psycopg2-binary
-django-environ
+#django-environ
 django-ckeditor
-crispy-bootstrap5
-django-crispy-forms
+#crispy-bootstrap5
+#django-crispy-forms
 django-widget-tweaks
-django-bootstrap-modal-forms
-social-auth-app-django
+#django-bootstrap-modal-forms
+#social-auth-app-django
 pillow
 gunicorn
-djangorestframework
+#djangorestframework
 python-decouple
-psycopg2-binary
+#psycopg2-binary
 django-rosetta
 django-parler
 django-hitcount
@@ -24,7 +24,8 @@ sendgrid
 requests
 django-tinymce
 django-next-prev
+whitenoise
 #django-picklefield
-django-json-widget
-django-highlightjs
+#django-json-widget
+#django-highlightjs
 
