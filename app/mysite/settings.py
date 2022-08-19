@@ -32,13 +32,13 @@ SECRET_KEY = config('SECRET_KEY')
 #DEBUG = config('DEBUG')
 DEBUG = False
 #ALLOWED_HOSTS = config('ALLOWED_HOSTS')
-#ALLOWED_HOSTS = ['*']
-ALLOWED_HOSTS = ['ec2-34-238-116-99.compute-1.amazonaws.com', '0.0.0.0', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
+#ALLOWED_HOSTS = ['ec2-34-238-116-99.compute-1.amazonaws.com', '0.0.0.0', '127.0.0.1']
 
 # Application definition
 
 INSTALLED_APPS = [
-    'whitenoise.runserver_nostatic',
+    #'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     'services',
     
     #third party apps
+    'storages',
     'ckeditor',
     'ckeditor_uploader',
     #"crispy_forms",
@@ -95,11 +96,11 @@ MIDDLEWARE = [
     #"debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
-#INTERNAL_IPS = [
-#    # ...
-#    "127.0.0.1",
-#    # ...
-#]
+INTERNAL_IPS = [
+    # ...
+    "127.0.0.1",
+    # ...
+]
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
 
@@ -169,7 +170,6 @@ AUTH_PASSWORD_VALIDATORS = [
 AUTHENTICATION_BACKENDS = (
     'social_core.backends.github.GithubOAuth2',
     'social_core.backends.google.GoogleOAuth2',
-
     'django.contrib.auth.backends.ModelBackend',
 )
 
@@ -225,8 +225,33 @@ RECAPTCHA_PRIVATE_KEY = config('RECAPTCHA_PRIVATE_KEY')
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
+
+USE_S3 = config('USE_S3') == 'TRUE'
+print(USE_S3)
+AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+print(AWS_S3_CUSTOM_DOMAIN)
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
+}
+AWS_LOCATION = 'static'
+
+#STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+#print(STATIC_URL)
+#STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+#STATICFILES_DIRS = [
+#    os.path.join(BASE_DIR, 'staticfiles/'),
+#]
+
 STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+#STATICFILES_DIRS = (os.path.join(BASE_DIR, 'staticfiles'),)
 
 # Extra places for collectstatic to find static files.
 #STATICFILES_DIRS = (os.path.join(BASE_DIR, 'staticfiles'),)
@@ -258,9 +283,6 @@ EMAIL_USE_TLS = True
 
 SESSION_COOKIE_AGE = 60 * 60 * 24 * 30
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
 CKEDITOR_UPLOAD_PATH = 'uploads/'
 
 CKEDITOR_CONFIGS = {
@@ -282,9 +304,9 @@ CKEDITOR_CONFIGS = {
     },
 }
 
-CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+#CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
-CRISPY_TEMPLATE_PACK = "bootstrap5"
+#CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 # Heroku configs
 django_heroku.settings(locals())
@@ -304,33 +326,3 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 SESSION_COOKIE_AGE = 36000000
 
-TINYMCE_JS_URL = '"https://cdn.tiny.cloud/1/t2hig0olqqh0rbzmri0waez8fx86sxj1typhf2pus8uqzara/tinymce/6/tinymce.min.js"'
-TINYMCE_COMPRESSOR = False
-
-TINYMCE_DEFAULT_CONFIG = {
-    'cleanup_on_startup': True,
-    'custom_undo_redo_levels': 20,
-    'selector': 'textarea',
-    'theme': 'silver',
-    "height": 500,
-    'plugins': '''
-            textcolor save link image media preview codesample contextmenu
-            table code lists fullscreen  insertdatetime  nonbreaking
-            contextmenu directionality searchreplace wordcount visualblocks
-            visualchars code fullscreen autolink lists  charmap print  hr
-            anchor pagebreak
-            ''',
-    'toolbar1': '''
-            fullscreen preview bold italic underline | fontselect,
-            fontsizeselect  | forecolor backcolor | alignleft alignright |
-            aligncenter alignjustify | indent outdent | bullist numlist table |
-            | link image media | codesample |
-            ''',
-    'toolbar2': '''
-            visualblocks visualchars |
-            charmap hr pagebreak nonbreaking anchor |  code |
-            ''',
-    'contextmenu': 'formats | link image',
-    'menubar': True,
-    'statusbar': True,
-}

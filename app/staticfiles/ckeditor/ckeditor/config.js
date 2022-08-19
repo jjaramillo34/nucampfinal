@@ -3,13 +3,8 @@
  * For licensing, see https://ckeditor.com/legal/ckeditor-oss-license
  */
 
-CKEDITOR.editorConfig = function(config) {
-    // Define changes to default configuration here. For example:
-    // config.language = 'fr';
-    // config.uiColor = '#AADC6E';
-    config.extraPlugins = "N1ED-editor";
-    config.apiKey = '{{ env("API_KEY_CK") }}';
-    console.log(config.apiKey)
-    config.skin = "n1theme";
-    config.removePlugins = "iframe";
+CKEDITOR.editorConfig = function( config ) {
+	// Define changes to default configuration here. For example:
+	// config.language = 'fr';
+	// config.uiColor = '#AADC6E';
 };

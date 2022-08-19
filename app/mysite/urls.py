@@ -53,10 +53,10 @@ urlpatterns = i18n_patterns(
          name='django.contrib.sitemaps.views.sitemap'),
 ) 
 
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+#urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-handler400 = 'mysite.views.page_bad_request'
-handler403 = 'mysite.views.page_forbidden'
-handler404 = 'mysite.views.page_not_found_view'
-handler500 = 'mysite.views.page_internal_error'
+#handler400 = 'mysite.views.page_bad_request'
+#handler403 = 'mysite.views.page_forbidden'
+#handler404 = 'mysite.views.page_not_found_view'
+#handler500 = 'mysite.views.page_internal_error'
