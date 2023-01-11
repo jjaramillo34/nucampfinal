@@ -18,6 +18,17 @@ from pathlib import Path
 from decouple import config
 from django.utils.translation import gettext_lazy as _
 
+import sentry_sdk
+from sentry_sdk.integrations.django import DjangoIntegration
+
+sentry_sdk.init(
+    dsn="https://a13712edbde34d259270b3c394b4a996@o1369764.ingest.sentry.io/6672943",
+    integrations=[
+        DjangoIntegration(
+            transaction_style='url',
+        ),
+    ],
+)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -30,7 +41,7 @@ SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = config('DEBUG')
-DEBUG = True
+DEBUG = False
 #ALLOWED_HOSTS = config('ALLOWED_HOSTS')
 ALLOWED_HOSTS = ['*']
 #ALLOWED_HOSTS = ['ec2-34-238-116-99.compute-1.amazonaws.com', '0.0.0.0', '127.0.0.1']
@@ -126,16 +137,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': BASE_DIR / 'db.sqlite3',
-#    }
-#}
 
 DATABASES = {
     'default': {
@@ -147,7 +150,6 @@ DATABASES = {
         'PORT': config('DB_PORT'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -235,36 +237,34 @@ if USE_S3:
     AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
     AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
 
-    #AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
-    #AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
-    #AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_STORAGE_BUCKET_NAME')
     AWS_DEFAULT_ACL = None
     AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
     #https://myaws-bucketapp-test.s3.amazonaws.com/static/images/icons/logo-01.png
-    #https://myaws-bucketapp-test.s3.us-east-1.amazonaws.com/
-    #https://myaws-bucketapp-test.s3.us-east-1.amazonaws.com/
-    #https://myaws-bucketapp-test.s3.us-east-1.amazonaws.com/
-    #print(AWS_ACCESS_KEY_ID)
     #print(AWS_S3_CUSTOM_DOMAIN)
     AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400'}
     # s3 static settings
     STATIC_LOCATION = 'static'
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
     print(STATIC_URL)
-    STATICFILES_STORAGE = 'mysite.storage_backends.StaticStorage'
+    STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+    #STATICFILES_STORAGE = 'mysite.storage_backends.StaticStorage'
     # s3 public media settings
     PUBLIC_MEDIA_LOCATION = 'media'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{PUBLIC_MEDIA_LOCATION}/'
+    print(MEDIA_URL)
     DEFAULT_FILE_STORAGE = 'mysite.storage_backends.PublicMediaStorage'
     # s3 private media settings
     PRIVATE_MEDIA_LOCATION = 'private'
-    PRIVATE_FILE_STORAGE = 'myproject.storage_backends.PrivateMediaStorage'
+    PRIVATE_FILE_STORAGE = 'mysite.storage_backends.PrivateMediaStorage'
 else:
     STATIC_URL = '/staticfiles/'
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-    MEDIA_URL = '/media/'
-    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-    
+    print(STATIC_ROOT)
+    MEDIA_URL = '/mediafiles/'
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
+    print(MEDIA_ROOT)
+    #pass
+
 STATICFILES_DIRS = ()
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
@@ -272,7 +272,8 @@ STATICFILES_FINDERS = (
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+#STATICFILES_DIRS = (os.path.join(BASE_DIR, 'staticfiles'),)
+#print(STATICFILES_DIRS)
 
 
 # Default primary key field type
@@ -309,6 +310,7 @@ CKEDITOR_CONFIGS = {
         'toolbar': 'full',
         'height': 1200,
         'width': 1000,
+        'skin': 'moono',
         'image2_alignClasses': [ 'image-left', 'image-center', 'image-right' ],
         'image2_captionedClass': 'image=captioned',
         'codeSnippet_theme': 'pojoaque',

@@ -19,6 +19,6 @@ def courses(request):
         context=context
     )
 
-class RecipeDetailView(DetailView):
+class CourseDetailView(DetailView):
     model = Course
     template_name = 'recipe_detail.html'    

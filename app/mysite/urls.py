@@ -26,13 +26,19 @@ from blog.sitemaps import PostSitemap
 from courses.sitemaps import CoursesSitemap
 from django.conf.urls import handler404, handler500, handler403, handler400
 
+def trigger_error(request):
+    division_by_zero = 1 / 0
+
 sitemaps = {
     'static': StaticViewSitemap,
     'blog': PostSitemap,
     'courses': CoursesSitemap,
 }
 
+
+
 urlpatterns = i18n_patterns(
+    path('sentry-debug/', trigger_error),
     path(_('admin/'), admin.site.urls),
     #path("", include(static_urlpatterns)),
     path('', include('home.urls')),
@@ -53,10 +59,10 @@ urlpatterns = i18n_patterns(
          name='django.contrib.sitemaps.views.sitemap'),
 ) 
 
-#urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-#handler400 = 'mysite.views.page_bad_request'
-#handler403 = 'mysite.views.page_forbidden'
-#handler404 = 'mysite.views.page_not_found_view'
-#handler500 = 'mysite.views.page_internal_error'
+handler400 = 'mysite.views.page_bad_request'
+handler403 = 'mysite.views.page_forbidden'
+handler404 = 'mysite.views.page_not_found_view'
+handler500 = 'mysite.views.page_internal_error'
