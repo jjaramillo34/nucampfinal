@@ -85,4 +85,4 @@ sqlparse==0.4.2
 starkbank-ecdsa==2.0.3
 uritemplate==4.1.1
 urllib3==1.26.11
-whitenoise==6.2.0
+##whitenoise==6.2.0 
