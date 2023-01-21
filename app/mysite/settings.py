@@ -14,6 +14,7 @@ import django_heroku
 import dj_database_url
 #import environ
 import os
+import sys
 from pathlib import Path
 from decouple import config
 from django.utils.translation import gettext_lazy as _
@@ -41,12 +42,17 @@ SECRET_KEY = config('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = config('DEBUG')
-DEBUG = False
+#DEBUG = False
+DEBUG = os.getenv('DEBUG', 'False') == 'True'
+print("DEBUG: ", DEBUG)
 #ALLOWED_HOSTS = config('ALLOWED_HOSTS')
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', "127.0.0.1, localhost").split(',')
 #ALLOWED_HOSTS = ['ec2-34-238-116-99.compute-1.amazonaws.com', '0.0.0.0', '127.0.0.1']
-
+print("ALLOWED_HOSTS: ", ALLOWED_HOSTS)
 # Application definition
+
+DEVELOPMENT_MODE = os.getenv('DEVELOPMENT', 'True') == 'False'
+print("DEVELOPMENT_MODE: ", DEVELOPMENT_MODE)
 
 INSTALLED_APPS = [
     #'whitenoise.runserver_nostatic',
@@ -140,7 +146,9 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
+if DEVELOPMENT_MODE is False:
+    # local postgresql database
+    DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': config('DB_NAME'),
@@ -148,9 +156,15 @@ DATABASES = {
         'PASSWORD': config('DB_PASSWORD'),
         'HOST': config('DB_HOST'),
         'PORT': config('DB_PORT'),
+        }
     }
-}
-
+elif len(sys.argv) > 0 and sys.argv[1] != 'collectstatic':
+    if os.getenv("DATABASE_URL", None) is None:
+        raise Exception("DATABASE_URL environment variable not defined")
+    DATABASES = {
+        "default": dj_database_url.parse(os.environ.get("DATABASE_URL")),
+    }
+    
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
