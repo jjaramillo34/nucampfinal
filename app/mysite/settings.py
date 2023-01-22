@@ -243,7 +243,7 @@ RECAPTCHA_PRIVATE_KEY = config('RECAPTCHA_PRIVATE_KEY')
 
 
 #USE_ = os.getenv('USE_S3') == 'TRUE'
-USE_S3 = True
+USE_S3 = False
 
 if USE_S3:
     # aws settings
@@ -271,7 +271,7 @@ if USE_S3:
     PRIVATE_MEDIA_LOCATION = 'private'
     PRIVATE_FILE_STORAGE = 'mysite.storage_backends.PrivateMediaStorage'
 else:
-    STATIC_URL = '/staticfiles/'
+    STATIC_URL = '/static/'
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     print(STATIC_ROOT)
     MEDIA_URL = '/mediafiles/'
@@ -351,13 +351,13 @@ CKEDITOR_CONFIGS = {
 #STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 # Cloudinary stuff
-#CLOUDINARY_STORAGE = {
-#    'CLOUD_NAME': config('CLOUD_NAME', default=""),
-#    'API_KEY': config('API_KEY', default=""),
-#    'API_SECRET': config('API_SECRET', default=""),
-#}
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': config('CLOUD_NAME', default=""),
+    'API_KEY': config('API_KEY', default=""),
+    'API_SECRET': config('API_SECRET', default=""),
+}
 
-#DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 SESSION_COOKIE_AGE = 36000000
 
