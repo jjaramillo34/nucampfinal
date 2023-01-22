@@ -1,0 +1,100 @@
+[{
+        "model": "home.hometranslation",
+        "pk": 1,
+        "fields": {
+            "language_code": "en",
+            "title": "Full Stack Developer / Data Analyst",
+            "description_header": "Hi, my name is Javier Jaramillo and I'm a full-stack developer / Data Analyst. Welcome to my personal website!",
+            "master": 1
+        }
+    },
+    {
+        "model": "home.hometranslation",
+        "pk": 2,
+        "fields": {
+            "language_code": "fr",
+            "title": "Développeur Full Stack / Analyste de Données",
+            "description_header": "Bonjour, mon nom est Javier Jaramillo et je suis un Développeur Full Stack / Analyste de Données. Bienvenue sur mon site personnel !",
+            "master": 1
+        }
+    },
+    {
+        "model": "home.hometranslation",
+        "pk": 3,
+        "fields": {
+            "language_code": "es",
+            "title": "Desarrollador Full Stack / Analista de Datos",
+            "description_header": "Hola, mi nombre es Javier Jaramillo y soy un Desarrollador full-stack / Analista de Datos. ¡Bienvenido a mi página web personal!",
+            "master": 1
+        }
+    },
+    {
+        "model": "home.hometranslation",
+        "pk": 4,
+        "fields": {
+            "language_code": "pt",
+            "title": "Desenvolvedor de Pilha Completa / Analista de Dados",
+            "description_header": "Olá, meu nome é Javier Jaramillo e sou um Desenvolvedor de Pilha Cheia / Analista de Dados. Bem-vindo ao meu site pessoal!",
+            "master": 1
+        }
+    },
+    {
+        "model": "home.hometranslation",
+        "pk": 5,
+        "fields": {
+            "language_code": "pt-br",
+            "title": "Desenvolvedor de pilha completa / Analista de dados",
+            "description_header": "Olá, meu nome é Javier Jaramillo e sou um desenvolvedor de pilha cheia / Analista de dados. Bem-vindo ao meu site pessoal!",
+            "master": 1
+        }
+    },
+    {
+        "model": "home.home",
+        "pk": 1,
+        "fields": {
+            "site": "Settings1",
+            "name": "Javier Jaramillo",
+            "img_header": "media/home/photo_mfn5jy",
+            "img_content": "media/home/profile-lg_kyw1aq",
+            "updated_on": "2022-08-10T20:55:31.582Z",
+            "created_on": "2022-08-10T14:57:34.377Z",
+            "status": 1,
+            "jobs": [{
+                    "id": 1,
+                    "items": [{
+                        "item": "fab fa-twitter fa-fw"
+                    }],
+                    "title": "https://twitter.com/jejaramilloc"
+                },
+                {
+                    "id": 2,
+                    "items": [{
+                        "item": "fab fa-linkedin-in fa-fw"
+                    }],
+                    "title": "https://www.linkedin.com/in/javierjaramillo1/"
+                },
+                {
+                    "id": 3,
+                    "items": [{
+                        "item": "fab fa-github-alt fa-fw"
+                    }],
+                    "title": "https://github.com/jjaramillo34/nucampfinal"
+                },
+                {
+                    "id": 4,
+                    "items": [{
+                        "item": "fab fa-stack-overflow fa-fw"
+                    }],
+                    "title": "https://stackoverflow.com/users/4542066/javier-jaramillo"
+                },
+                {
+                    "id": 5,
+                    "items": [{
+                        "item": "fab fa-codepen fa-fw"
+                    }],
+                    "title": "https://gist.github.com/jjaramillo34"
+                }
+            ]
+        }
+    }
+]
