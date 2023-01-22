@@ -33,6 +33,7 @@ django-rosetta==0.9.8
 django-storages==1.13.1
 django-tinymce==3.4.0
 django-widget-tweaks==1.4.12
+django-heroku==0.3.1
 firebase-admin==6.0.1
 future==0.18.2
 google-api-core==2.11.0

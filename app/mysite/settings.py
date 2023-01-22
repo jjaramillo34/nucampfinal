@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
-#import django_heroku
+import django_heroku
 import dj_database_url
 #import environ
 import os
@@ -344,9 +344,9 @@ CKEDITOR_CONFIGS = {
 #CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 # Heroku configs
-#django_heroku.settings(locals())  
-#db_from_env = dj_database_url.config(conn_max_age=500)
-#DATABASES['default'].update(db_from_env)
+django_heroku.settings(locals())  
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
 
 #STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
