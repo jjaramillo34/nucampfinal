@@ -147,7 +147,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-if DEVELOPMENT_MODE is False:
+if DEVELOPMENT_MODE is True:
     # local postgresql database
     DATABASES = {
     'default': {
